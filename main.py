@@ -31,7 +31,7 @@
 
 import sys
 import datetime
-
+from fractions import Fraction
 
 # print(sys.getsizeof(443773373737**444))
 
@@ -58,4 +58,47 @@ import datetime
 
 # print(format(0.1, '.64f'))
 
-print(True+True)
+# print(True+True)
+
+# print(float(True))
+
+# print(bool(''))
+# print(bool(1 + 0j))
+# print(bool(0 + 0j))
+#
+# print(help(list))
+
+# print(bool(x))
+
+# a = (,)
+
+# print(len(None))
+
+
+# a = None
+#
+# if a is not None and len(a) > 0:
+#     print('good')
+# else:
+#     print('bad')
+
+
+# print((1, 2) is (1, 2))
+#
+# print(Fraction(2, 3))
+
+# a = (1, 2, 3, 4, 5)
+#
+# c, *v = a
+#
+# print(c, v)
+
+
+
+
+
+
+
+
+
+
