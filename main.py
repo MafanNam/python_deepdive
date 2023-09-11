@@ -93,12 +93,12 @@ from fractions import Fraction
 #
 # print(c, v)
 
+# my_func = lambda x: x ** 2
+#
+# print(my_func(4))
+# print(my_func.__annotations__)
 
-
-
-
-
-
-
-
-
+# TODO: test func
+# and some notes
+# def func():
+#     pass
