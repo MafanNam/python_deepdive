@@ -102,3 +102,8 @@ from fractions import Fraction
 # and some notes
 # def func():
 #     pass
+
+
+# a = {1, 5, 33, 0, 1, 4, 5, 7, 4, 222}
+#
+# print(max(a))
