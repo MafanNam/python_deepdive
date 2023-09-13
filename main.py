@@ -107,3 +107,54 @@ from fractions import Fraction
 # a = {1, 5, 33, 0, 1, 4, 5, 7, 4, 222}
 #
 # print(max(a))
+
+# a = 1
+#
+# def f():
+#     a = 'fff'
+#     print(a)
+#
+# f()
+# print(a)
+
+# a = 1
+#
+# def f():
+#     print(a)
+#     a = 3
+
+# a = 3
+#
+# f = lambda n: (a**n, a)
+#
+# print(f(4))
+#
+# print(f.__globals__)
+
+# def outher():
+#     # global x
+#     x = 'hello'
+#
+#     def innner():
+#         global x
+#         x = 'pytho'
+#
+#     innner()
+#
+#     print(x)
+#
+# print(outher())
+#
+# x = 'fdsf'
+#
+# def f():
+#     x = 0
+#     def g():
+#         nonlocal x
+#         x = 44
+#
+#
+# f()
+# print(x)
+
+
