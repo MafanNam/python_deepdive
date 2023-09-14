@@ -33,6 +33,7 @@ import sys
 import datetime
 from fractions import Fraction
 
+
 # print(sys.getsizeof(443773373737**444))
 
 # def calc(a):
@@ -187,5 +188,27 @@ from fractions import Fraction
 # print(add(3, 5))
 
 
+# def diamond(n):
+#     s = []
+#     for i in range(1, n + 1, 2):
+#         s.append(' ' * (n // 2 - (i-1)) + '*' * i + '\n')
+#
+#     for j in range(n, 1, 2):
+#         s.append(' ' * (n - j - 1) + '*' * j + '\n')
+#
+#     return ''.join(s)
+#
+#
+# print(diamond(5))
 
 
+def title_case(title: str, minor_words='') -> str:
+    title = title.title().split()
+    minor_words = minor_words.lower().split(' ')
+    for i in range(1, len(title)):
+        if title[i].lower() in minor_words:
+            title[i] = title[i].lower()
+    return ' '.join(title)
+
+
+print(title_case('a clash of KINGS', 'a an the of'))
