@@ -4,17 +4,10 @@ def timed(fn):
 
     @wraps(fn)
     def inner(*args, **kwargs):
-        elapsed_total = 0
-        elapsed_count = 0
-
-        for i in range(10):
-            print('Running iteration', elapsed_count)
-            start = perf_counter()
-            result = fn(*args, **kwargs)
-            end = perf_counter()
-            elapsed = end - start
-            elapsed_total += elapsed
-            elapsed_count += 1
+        start = perf_counter()
+        result = fn(*args, **kwargs)
+        end = perf_counter()
+        elapsed = end - start
 
         args_ = [str(a) for a in args]
         kwargs_ = [f"{k}={v}" for k, v in kwargs.items()]
@@ -72,4 +65,88 @@ def fib_reduce(n):
 # print(fib_reduce(100))
 
 
+def logged(fn):
+    from functools import wraps
+    from datetime import datetime, timezone
 
+    @wraps(fn)
+    def inner(*args, **kwargs):
+        run_dt = datetime.now(timezone.utc)
+        result = fn(*args, **kwargs)
+        print(f"{run_dt}: called {fn.__name__}")
+        return result
+    return inner
+
+@logged
+def f():
+    pass
+
+# print(f())
+
+@timed
+@logged
+def fact(n):
+    from operator import mul
+    from functools import reduce
+
+    return reduce(mul, range(1, n+1))
+
+# print(fact(5))
+
+
+
+
+# print(fib(10))
+
+@timed
+class Fib:
+    def __init__(self):
+        self.cache = {1: 1, 2: 1}
+
+
+    def fib(self, n):
+        if n not in self.cache:
+            print(f"Calculating fib({n})")
+            self.cache[n] = self.fib(n-1) + self.fib(n-2)
+
+        return self.cache[n]
+
+# f = Fib()
+#
+# print(f.fib(10))
+
+@timed
+def memorize(fib):
+    cache = dict()
+
+    def inner(n):
+        if n not in cache:
+            cache[n] = fib(n)
+
+        return cache[n]
+
+    return inner
+
+
+@memorize
+def fib(n):
+    print(f"Calculating fib({n})")
+    return 1 if n < 3 else fib(n-1) + fib(n-2)
+
+# print(fib(10))
+# print(fib(11))
+# print(fib(12))
+# print(fib(13))
+# print(fib(20))
+# print(fib(40))
+# print(fib(50))
+
+# print(f(10))
+
+@timed
+@memorize
+def fact(n):
+    return 1 if n < 2 else n * fact(n - 1)
+
+
+print(fact(100))
