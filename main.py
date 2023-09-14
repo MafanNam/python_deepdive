@@ -157,4 +157,35 @@ from fractions import Fraction
 # f()
 # print(x)
 
+# x = 33
+#
+# def f():
+#     nonlocal x
+#     x = 3
+#
+# f()
+
+# def counter(fn):
+#     count = 0
+#
+#     def inner(*args, **kwargs):
+#         nonlocal count
+#         count += 1
+#         print(count)
+#
+#         return fn(*args, **kwargs)
+#     return inner
+#
+# @counter
+# def add(a, b):
+#     return a + b
+#
+# print(add(3, 5))
+# print(add(3, 5))
+# print(add(3, 5))
+# print(add(3, 5))
+# print(add(3, 5))
+
+
+
 
