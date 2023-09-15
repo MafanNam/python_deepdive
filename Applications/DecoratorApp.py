@@ -169,6 +169,7 @@ def mu_func(s):
 
 
 class MyClass:
+
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -186,6 +187,41 @@ def mu_func(s):
 
 
 # print(mu_func('dd'))
+
+
+from html import escape
+
+def html_escape(arg):
+    return escape(str(arg))
+
+def html_int(a):
+    return f"{a}(<i>{str(hex(a))}</i>)"
+
+
+def html_real(a):
+    return f"{round(a, 2):.2f}"
+
+def html_str(s):
+    return html_escape(s).replace('\n', '<br/>\b')
+
+def html_list(l):
+    items = (f"<li>{html_escape(item)}</li>" for item in l)
+    return '<ul>\n' + '\n'.join(items) + '\n</ul>'
+
+
+def html_dict(d):
+    items = (f"<li>{k}={v}</li>" for k, v in d)
+    return '<ul>\n' + '\n'.join(items) + '\n</ul>'
+
+
+# print(html_str("""this is
+# a multi line
+# string espesial
+# for me"""))
+#
+# print(html_int(255))
+#
+# print(html_escape(3+10j))
 
 
 
