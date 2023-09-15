@@ -202,13 +202,24 @@ from fractions import Fraction
 # print(diamond(5))
 
 
-def title_case(title: str, minor_words='') -> str:
-    title = title.title().split()
-    minor_words = minor_words.lower().split(' ')
-    for i in range(1, len(title)):
-        if title[i].lower() in minor_words:
-            title[i] = title[i].lower()
-    return ' '.join(title)
-
-
-print(title_case('a clash of KINGS', 'a an the of'))
+# def title_case(title: str, minor_words='') -> str:
+#     title = title.title().split()
+#     minor_words = minor_words.lower().split(' ')
+#     for i in range(1, len(title)):
+#         if title[i].lower() in minor_words:
+#             title[i] = title[i].lower()
+#     return ' '.join(title)
+#
+#
+# print(title_case('a clash of KINGS', 'a an the of'))
+#
+#
+# def f(s):
+#     s = s.title()
+#     s = s.replace(' ', '')
+#
+#     return '#' + s
+#
+# s = '    fjfjfj   fkfkfk    '
+#
+# print(f(s))
