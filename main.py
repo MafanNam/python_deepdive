@@ -223,3 +223,30 @@ from fractions import Fraction
 # s = '    fjfjfj   fkfkfk    '
 #
 # print(f(s))
+
+
+# def cockroach_speed(s: int):
+#     return s.__floor__()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

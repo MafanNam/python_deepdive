@@ -128,7 +128,7 @@ def memorize(fib):
     return inner
 
 
-@memorize
+# @memorize
 def fib(n):
     print(f"Calculating fib({n})")
     return 1 if n < 3 else fib(n-1) + fib(n-2)
@@ -143,13 +143,61 @@ def fib(n):
 
 # print(f(10))
 
-@timed
-@memorize
+# @timed
+# @memorize
 def fact(n):
     return 1 if n < 2 else n * fact(n - 1)
 
 
 # print(fact(100))
+
+
+
+def my_dec(a, b):
+    def dec(fn):
+        def inner(*args, **kwargs):
+            print(f'decorated function called: a={a}, b={b}')
+            return fn(*args, **kwargs)
+        return inner
+    return dec
+
+@my_dec(10, 20)
+def mu_func(s):
+    print(f"Hello {s}")
+
+# print(mu_func('Test'))
+
+
+class MyClass:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def __call__(self, fn):
+        def inner(*args, **kwargs):
+            print(f'decorated function called: a={self.a}, b={self.b}')
+            return fn(*args, **kwargs)
+
+        return inner
+
+@MyClass(99, 33)
+def mu_func(s):
+    print(f"Hello {s}")
+
+
+# print(mu_func('dd'))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
