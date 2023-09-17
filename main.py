@@ -229,18 +229,42 @@ from fractions import Fraction
 #     return s.__floor__()
 
 
+# write the function is_anagram
+# def is_anagram(test, original):
+#     test = sorted(test.lower())
+#     original = sorted(original.lower())
+#
+#     return [False, True][test==original]
 
 
+# print(is_anagram("foefet", "toffee"))
 
 
+# def solution(nums):
+#     t = nums[0]
+#
+#
+#
+# print(solution([1,2,3,10,5]))
 
 
+# class Point2D:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#     def __repr__(self):
+#         return f"Point2D(x={self.x}, y={self.y})"
+#
+#     def __eq__(self, other):
+#         if isinstance(other, Point2D):
+#             return self.x == other.x and self.y == other.y
+#         else:
+#             return False
 
-
-
-
-
-
+# x = {'x': 10, 'y': 20, 'z': 30}
+#
+# print(x)
 
 
 
