@@ -33,7 +33,6 @@ import sys
 import datetime
 from fractions import Fraction
 
-
 # print(sys.getsizeof(443773373737**444))
 
 # def calc(a):
@@ -267,10 +266,43 @@ from fractions import Fraction
 # print(x)
 
 
+from time import perf_counter
+from collections import namedtuple
+
+Timings = namedtuple('Timings', 'timing_1 timing_2 abs_diff rel_diff_perc')
 
 
+def compare_timings(timing1, timing2):
+    rel_diff = (timing2 - timing1) / timing1 * 100
+
+    timings = Timings(round(timing1, 1), round(timing2, 1),
+                      round(timing2 - timing1, 1), round(rel_diff, 2))
+
+    return timings
 
 
+test_repeats = 10_000_000
 
+import math
 
+start = perf_counter()
 
+for _ in range(test_repeats):
+    math.sqrt(2)
+
+end = perf_counter()
+elapsed_fully_qualified = end - start
+print(f"Elapsed: {elapsed_fully_qualified}")
+
+from math import sqrt
+
+start = perf_counter()
+
+for _ in range(test_repeats):
+    sqrt(2)
+
+end = perf_counter()
+elapsed_direct_qualified = end - start
+print(f"Elapsed: {elapsed_direct_qualified}")
+
+print(compare_timings(elapsed_fully_qualified, elapsed_direct_qualified))
