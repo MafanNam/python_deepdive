@@ -283,26 +283,30 @@ def compare_timings(timing1, timing2):
 
 test_repeats = 10_000_000
 
-import math
+# import math
+#
+# start = perf_counter()
+#
+# for _ in range(test_repeats):
+#     math.sqrt(2)
+#
+# end = perf_counter()
+# elapsed_fully_qualified = end - start
+# print(f"Elapsed: {elapsed_fully_qualified}")
 
-start = perf_counter()
+# from math import sqrt
+#
+# start = perf_counter()
+#
+# for _ in range(test_repeats):
+#     sqrt(2)
+#
+# end = perf_counter()
+# elapsed_direct_qualified = end - start
+# print(f"Elapsed: {elapsed_direct_qualified}")
 
-for _ in range(test_repeats):
-    math.sqrt(2)
+# print(compare_timings(elapsed_fully_qualified, elapsed_direct_qualified))
 
-end = perf_counter()
-elapsed_fully_qualified = end - start
-print(f"Elapsed: {elapsed_fully_qualified}")
-
-from math import sqrt
-
-start = perf_counter()
-
-for _ in range(test_repeats):
-    sqrt(2)
-
-end = perf_counter()
-elapsed_direct_qualified = end - start
-print(f"Elapsed: {elapsed_direct_qualified}")
-
-print(compare_timings(elapsed_fully_qualified, elapsed_direct_qualified))
+# if __name__ == '__main__':
+#     print(f"start main.py == {__name__}")
+#     import __main__
