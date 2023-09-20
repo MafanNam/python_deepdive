@@ -265,7 +265,7 @@ from fractions import Fraction
 #
 # print(x)
 
-
+str
 from time import perf_counter
 from collections import namedtuple
 
@@ -310,3 +310,26 @@ test_repeats = 10_000_000
 # if __name__ == '__main__':
 #     print(f"start main.py == {__name__}")
 #     import __main__
+
+
+
+# d = {'f': 333, 'dd': 234}
+#
+# print(d.items(), d.keys())
+
+# from datetime import datetime
+# from math import pi
+#
+# d = datetime.utcnow()
+#
+# e = pi
+#
+# print(f"{d=}, {e=}")
+# print(f"{d=:%Y-%m-%d}, {e=:.3f}")
+# print(d, e)
+#
+# print(f"{1 + 2 = }")
+
+
+
+
