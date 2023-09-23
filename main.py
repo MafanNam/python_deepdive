@@ -283,6 +283,7 @@ def compare_timings(timing1, timing2):
 
 test_repeats = 10_000_000
 
+
 # import math
 #
 # start = perf_counter()
@@ -310,7 +311,6 @@ test_repeats = 10_000_000
 # if __name__ == '__main__':
 #     print(f"start main.py == {__name__}")
 #     import __main__
-
 
 
 # d = {'f': 333, 'dd': 234}
@@ -345,3 +345,47 @@ test_repeats = 10_000_000
 # print('fffffffff')
 
 # print('' + '' + '' + 'f')
+# t = int(input('t= '))
+#
+# match t:
+#     case 1:
+#         print('hi 1')
+#     case 2:
+#         print('hi 2')
+#
+#
+# def switcher(fn):
+#     registry = dict()
+#     registry['default'] = fn
+#
+#     def register(case):
+#         def inner(fn):
+#             registry[case] = fn
+#             return fn
+#
+#         return inner
+#
+#     def decorator(case):
+#         fn = registry.get(case, registry['default'])
+#
+#         return fn
+#
+#     decorator.register = register
+#     return decorator
+#
+#
+# @switcher
+# def dow():
+#     return 'Invalid day in week'
+#
+# @dow.register(1)
+# def dow_1():
+#     return 'Monday'
+#
+# dow.register(2)(lambda: 'Tuesday')
+# dow.register(3)(lambda: 'Wednesday')
+# dow.register(4)(lambda: 'Thursday')
+#
+#
+# print(dow(2)())
+
