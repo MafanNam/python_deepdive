@@ -389,3 +389,6 @@ test_repeats = 10_000_000
 #
 # print(dow(2)())
 
+# print(None * 3)
+# print(str(None) * 3)
+
