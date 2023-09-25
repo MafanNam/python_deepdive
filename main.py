@@ -392,3 +392,7 @@ test_repeats = 10_000_000
 # print(None * 3)
 # print(str(None) * 3)
 
+# from timeit import timeit
+#
+# print(timeit("(1, 2, 3, 4, 5, 6, 7, 8, 9)", number=10_000_000))
+# print(timeit("[1, 2, 3, 4, 5, 6, 7, 8, 9]", number=10_000_000))
