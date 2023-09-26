@@ -396,3 +396,12 @@ test_repeats = 10_000_000
 #
 # print(timeit("(1, 2, 3, 4, 5, 6, 7, 8, 9)", number=10_000_000))
 # print(timeit("[1, 2, 3, 4, 5, 6, 7, 8, 9]", number=10_000_000))
+
+a = slice(2, 6, 1)
+
+l = 'python'
+
+print(l[a])
+
+
+
