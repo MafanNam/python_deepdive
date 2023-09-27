@@ -283,7 +283,6 @@ def compare_timings(timing1, timing2):
 
 test_repeats = 10_000_000
 
-
 # import math
 #
 # start = perf_counter()
@@ -397,11 +396,55 @@ test_repeats = 10_000_000
 # print(timeit("(1, 2, 3, 4, 5, 6, 7, 8, 9)", number=10_000_000))
 # print(timeit("[1, 2, 3, 4, 5, 6, 7, 8, 9]", number=10_000_000))
 
-a = slice(2, 6, 1)
+# a = slice(2, 6, 1)
+#
+# l = 'python'
+#
+# print(l[a])
 
-l = 'python'
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# print(l.__getitem__(-1))
+# print(l[-1])
 
-print(l[a])
 
+# from functools import lru_cache
+#
+#
+# @lru_cache(2 ** 10)
+# def fib(n):
+#     if n < 2:
+#         return 1
+#     return fib(n - 1) + fib(n - 2)
+#
+# print(fib(10))
+# print(fib(100))
+# print(fib(500))
+# print(fib(700))
+# print(fib(900))
+
+# print('-' * 20, 'List', '-' * 20)
+#
+# l1 = [1, 2, 3]
+# l2 = [4, 5, 6]
+#
+# print(hex(id(l1)))
+# print(hex(id(l2)))
+#
+# l1 += l2
+#
+# print(hex(id(l1)))
+#
+# print('-' * 20, 'Tuple', '-' * 20)
+#
+# l1 = (1, 2, 3)
+# l2 = (4, 5, 6)
+#
+# print(hex(id(l1)))
+# print(hex(id(l2)))
+#
+# l1 += l2
+#
+# print(hex(id(l1)))
 
 
