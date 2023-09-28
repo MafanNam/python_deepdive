@@ -265,23 +265,23 @@ from fractions import Fraction
 #
 # print(x)
 
-str
-from time import perf_counter
-from collections import namedtuple
-
-Timings = namedtuple('Timings', 'timing_1 timing_2 abs_diff rel_diff_perc')
-
-
-def compare_timings(timing1, timing2):
-    rel_diff = (timing2 - timing1) / timing1 * 100
-
-    timings = Timings(round(timing1, 1), round(timing2, 1),
-                      round(timing2 - timing1, 1), round(rel_diff, 2))
-
-    return timings
-
-
-test_repeats = 10_000_000
+# str
+# from time import perf_counter
+# from collections import namedtuple
+#
+# Timings = namedtuple('Timings', 'timing_1 timing_2 abs_diff rel_diff_perc')
+#
+#
+# def compare_timings(timing1, timing2):
+#     rel_diff = (timing2 - timing1) / timing1 * 100
+#
+#     timings = Timings(round(timing1, 1), round(timing2, 1),
+#                       round(timing2 - timing1, 1), round(rel_diff, 2))
+#
+#     return timings
+#
+#
+# test_repeats = 10_000_000
 
 # import math
 #
@@ -446,5 +446,43 @@ test_repeats = 10_000_000
 # l1 += l2
 #
 # print(hex(id(l1)))
+
+
+# sq = [i**2 for i in range(100)]
+# print(sq)
+# # print(i)
+#
+# sq2 = []
+# for i in range(100):
+#     sq2.append(i**2)
+#
+# print(sq2)
+# print(i)
+#
+# from math import factorial
+#
+# def combo(n, k):
+#     return factorial(n) // (factorial(k) * factorial(n-k))
+#
+# size = 10
+#
+# pascal = [[combo(n, k) for k in range(n+1)] for n in range(size+1)]
+#
+# print(*pascal, sep='\n')
+
+
+# l1 = ['a', 'b', 'c']
+# l2 = ['x', 'y', 'x']
+#
+# res = [i+j for i in l1 for j in l2]
+# print(res)
+
+# l1 = ['a', 'b', 'c']
+# l2 = ['x', 'b', 'c']
+#
+# res = [i+j for i in l1 for j in l2 if i != j]
+# print(res)
+
+
 
 
