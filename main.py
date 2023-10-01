@@ -484,5 +484,37 @@ from fractions import Fraction
 # print(res)
 
 
+class Cities:
+    def __init__(self):
+        self._cities = ['angl', 'ball']
+        self._index = 0
 
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self._index >= len(self._cities):
+            raise StopIteration
+        else:
+            item = self._cities[self._index]
+            self._index += 1
+            return item
+
+
+c = Cities()
+for i in c:
+    print(i)
+
+
+class Cities2:
+    def __init__(self):
+        self._cities = ['angl', 'ball']
+
+    def __len__(self):
+        return len(self._cities)
+
+
+c = Cities2()
+for i in c:
+    print(i)
 
