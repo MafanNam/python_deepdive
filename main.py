@@ -581,6 +581,39 @@ from fractions import Fraction
 #     print(i)
 
 
+# def seq_gen(n):
+#     for i in range(n):
+#         yield i ** 2
+#
+# sq = seq_gen(10)
+#
+# for i in sq:
+#     print(i)
 
 
+# from math import factorial
+#
+#
+# def combo(n, k):
+#     return factorial(n) // (factorial(k) * factorial(n - k))
+#
+#
+# size = 3
+#
+# pascal = ([combo(n, k) for k in range(n+1)] for n in range(size + 1))
+#
+# print(list(pascal))
 
+
+# def matrix(n):
+#     gen = ((i * j for j in range(1, n+1)) for i in range(1, n+1))
+#     return gen
+#
+#
+# def matrix_iter(n):
+#     for row in matrix(n):
+#         yield from row
+#
+#
+# for i in matrix_iter(3):
+#     print(i)

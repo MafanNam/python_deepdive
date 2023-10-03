@@ -48,30 +48,79 @@ class Polygon:
         return self._n * self.side_length
 
 
-class Polygons:
-    def __init__(self, m, R):
+p = Polygon(4, 4)
+
+# class Polygons:
+#     def __init__(self, m, R):
+#         if m < 3:
+#             raise ValueError("Polygons must have at least three sides")
+#         self._m = m
+#         self._R = R
+#         self._polygons = [Polygon(i, R) for i in range(3, m + 1)]
+#
+#     def __len__(self):
+#         return self._m - 2
+#
+#     def __repr__(self):
+#         return f"Polygons(m={self._m}, R={self._R})"
+#
+#     def __getitem__(self, item):
+#         return self._polygons[item]
+#
+#     @property
+#     def max_efficiency_polygon(self):
+#         sorted_polygons = sorted(
+#             self._polygons, key=lambda p: p.area / p.perimeter,
+#             reverse=True)
+#         return sorted_polygons[0]
+
+
+# pol = Polygons(10, 1)
+# print(pol.max_efficiency_polygon)
+
+class PolygonsIter:
+    def __init__(self, length, *, m, R):
         if m < 3:
-            raise ValueError("Polygons must have at least three sides")
+            raise ValueError("PolygonsIter must have at least three sides")
         self._m = m
         self._R = R
-        self._polygons = [Polygon(i, R) for i in range(3, m + 1)]
+        self.length = length
+        # self._polygons = [Polygon(i, R) for i in range(3, m + 1)]
+        self._i = 2
 
     def __len__(self):
         return self._m - 2
 
     def __repr__(self):
-        return f"Polygons(m={self._m}, R={self._R})"
+        return f"PolygonsIter(m={self._m}, R={self._R})"
 
-    def __getitem__(self, item):
-        return self._polygons[item]
+    # def __getitem__(self, item):
+    #     return self._polygons[item]
 
-    @property
-    def max_efficiency_polygon(self):
-        sorted_polygons = sorted(
-            self._polygons, key=lambda p: p.area / p.perimeter,
-            reverse=True)
-        return sorted_polygons[0]
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self._i >= self.length:
+            raise StopIteration
+        else:
+            self._i += 1
+            return Polygon(self._i, self._R)
 
 
-pol = Polygons(10, 1)
-print(pol.max_efficiency_polygon)
+    # @property
+    # def max_efficiency_polygon(self):
+    #     sorted_polygons = sorted(
+    #         self._polygons, key=lambda p: p.area / p.perimeter,
+    #         reverse=True)
+    #     return sorted_polygons[0]
+
+
+p = PolygonsIter(8, m=10, R=10)
+
+for i in p:
+    print(i)
+
+
+
+
