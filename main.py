@@ -32,6 +32,7 @@
 import sys
 import datetime
 from fractions import Fraction
+from functools import reduce
 
 # print(sys.getsizeof(443773373737**444))
 
@@ -617,3 +618,15 @@ from fractions import Fraction
 #
 # for i in matrix_iter(3):
 #     print(i)
+
+
+# l = [1, 2, 3, 4]
+#
+# print(reduce(lambda x, y: x+y, l))
+
+# s = '1 2 3 4 5 6 7'
+# s_map = map(int, s.split(' '))
+# print(list(s_map))
+
+
+
