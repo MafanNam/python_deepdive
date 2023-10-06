@@ -32,6 +32,7 @@
 import sys
 import datetime
 from fractions import Fraction
+from functools import reduce
 
 # print(sys.getsizeof(443773373737**444))
 
@@ -265,24 +266,23 @@ from fractions import Fraction
 #
 # print(x)
 
-str
-from time import perf_counter
-from collections import namedtuple
-
-Timings = namedtuple('Timings', 'timing_1 timing_2 abs_diff rel_diff_perc')
-
-
-def compare_timings(timing1, timing2):
-    rel_diff = (timing2 - timing1) / timing1 * 100
-
-    timings = Timings(round(timing1, 1), round(timing2, 1),
-                      round(timing2 - timing1, 1), round(rel_diff, 2))
-
-    return timings
-
-
-test_repeats = 10_000_000
-
+# str
+# from time import perf_counter
+# from collections import namedtuple
+#
+# Timings = namedtuple('Timings', 'timing_1 timing_2 abs_diff rel_diff_perc')
+#
+#
+# def compare_timings(timing1, timing2):
+#     rel_diff = (timing2 - timing1) / timing1 * 100
+#
+#     timings = Timings(round(timing1, 1), round(timing2, 1),
+#                       round(timing2 - timing1, 1), round(rel_diff, 2))
+#
+#     return timings
+#
+#
+# test_repeats = 10_000_000
 
 # import math
 #
@@ -388,4 +388,245 @@ test_repeats = 10_000_000
 #
 #
 # print(dow(2)())
+
+# print(None * 3)
+# print(str(None) * 3)
+
+# from timeit import timeit
+#
+# print(timeit("(1, 2, 3, 4, 5, 6, 7, 8, 9)", number=10_000_000))
+# print(timeit("[1, 2, 3, 4, 5, 6, 7, 8, 9]", number=10_000_000))
+
+# a = slice(2, 6, 1)
+#
+# l = 'python'
+#
+# print(l[a])
+
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# print(l.__getitem__(-1))
+# print(l[-1])
+
+
+# from functools import lru_cache
+#
+#
+# @lru_cache(2 ** 10)
+# def fib(n):
+#     if n < 2:
+#         return 1
+#     return fib(n - 1) + fib(n - 2)
+#
+# print(fib(10))
+# print(fib(100))
+# print(fib(500))
+# print(fib(700))
+# print(fib(900))
+
+# print('-' * 20, 'List', '-' * 20)
+#
+# l1 = [1, 2, 3]
+# l2 = [4, 5, 6]
+#
+# print(hex(id(l1)))
+# print(hex(id(l2)))
+#
+# l1 += l2
+#
+# print(hex(id(l1)))
+#
+# print('-' * 20, 'Tuple', '-' * 20)
+#
+# l1 = (1, 2, 3)
+# l2 = (4, 5, 6)
+#
+# print(hex(id(l1)))
+# print(hex(id(l2)))
+#
+# l1 += l2
+#
+# print(hex(id(l1)))
+
+
+# sq = [i**2 for i in range(100)]
+# print(sq)
+# # print(i)
+#
+# sq2 = []
+# for i in range(100):
+#     sq2.append(i**2)
+#
+# print(sq2)
+# print(i)
+#
+# from math import factorial
+#
+# def combo(n, k):
+#     return factorial(n) // (factorial(k) * factorial(n-k))
+#
+# size = 10
+#
+# pascal = [[combo(n, k) for k in range(n+1)] for n in range(size+1)]
+#
+# print(*pascal, sep='\n')
+
+
+# l1 = ['a', 'b', 'c']
+# l2 = ['x', 'y', 'x']
+#
+# res = [i+j for i in l1 for j in l2]
+# print(res)
+
+# l1 = ['a', 'b', 'c']
+# l2 = ['x', 'b', 'c']
+#
+# res = [i+j for i in l1 for j in l2 if i != j]
+# print(res)
+
+
+# class Cities:
+#     def __init__(self):
+#         self._cities = ['angl', 'ball']
+#         self._index = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self._index >= len(self._cities):
+#             raise StopIteration
+#         else:
+#             item = self._cities[self._index]
+#             self._index += 1
+#             return item
+#
+#
+# c = Cities()
+# for i in c:
+#     print(i)
+#
+#
+# class Cities2:
+#     def __init__(self):
+#         self._cities = ['angl', 'ball']
+#
+#     def __len__(self):
+#         return len(self._cities)
+#
+#
+# c = Cities2()
+# for i in c:
+#     print(i)
+
+
+# s = 'sksks sksks'
+#
+# s_iter = iter(s)
+# print(next(s_iter))
+
+#
+# _SUITS = ('Spades', 'Hearts', 'Diamonds', 'Clubs')
+# _RANKS = tuple(range(2, 11)) + tuple('JQKA')
+#
+# from collections import namedtuple
+#
+# Card = namedtuple('Card', 'rank suit')
+#
+# class CardDeck:
+#     def __init__(self):
+#         self.length = len(_SUITS) * len(_RANKS)
+#
+#     def __len__(self):
+#         return self.length
+#
+#     def __iter__(self):
+#         return self.CardDeckIterator(self.length)
+#
+#     def __reversed__(self):
+#         return self.CardDeckIterator(self.length, reverse=True)
+#
+#     class CardDeckIterator:
+#         def __init__(self, length, reverse=False):
+#             self.length = length
+#             self.reverse = reverse
+#             self.i = 0
+#
+#         def __iter__(self):
+#             return self
+#
+#         def __next__(self):
+#             if self.i >= self.length:
+#                 raise StopIteration
+#             else:
+#                 if self.reverse:
+#                     index = self.length - 1 - self.i
+#                 else:
+#                     index = self.i
+#                 suit = _SUITS[index // len(_RANKS)]
+#                 rank = _RANKS[index % len(_RANKS)]
+#                 self.i += 1
+#                 return Card(rank, suit)
+#
+#
+# deck  = CardDeck()
+#
+# for card in deck:
+#     print(card)
+
+# print(list(CardDeck()))
+
+# deck_rev = reversed(deck)
+#
+# for i in deck_rev:
+#     print(i)
+
+
+# def seq_gen(n):
+#     for i in range(n):
+#         yield i ** 2
+#
+# sq = seq_gen(10)
+#
+# for i in sq:
+#     print(i)
+
+
+# from math import factorial
+#
+#
+# def combo(n, k):
+#     return factorial(n) // (factorial(k) * factorial(n - k))
+#
+#
+# size = 3
+#
+# pascal = ([combo(n, k) for k in range(n+1)] for n in range(size + 1))
+#
+# print(list(pascal))
+
+
+# def matrix(n):
+#     gen = ((i * j for j in range(1, n+1)) for i in range(1, n+1))
+#     return gen
+#
+#
+# def matrix_iter(n):
+#     for row in matrix(n):
+#         yield from row
+#
+#
+# for i in matrix_iter(3):
+#     print(i)
+
+
+# l = [1, 2, 3, 4]
+#
+# print(reduce(lambda x, y: x+y, l))
+
+# s = '1 2 3 4 5 6 7'
+# s_map = map(int, s.split(' '))
+# print(list(s_map))
+
+
 
