@@ -628,5 +628,11 @@ from functools import reduce
 # s_map = map(int, s.split(' '))
 # print(list(s_map))
 
+# for i in range(5):
+#     for j in range(5):
+#         print(i, j)
+#
+# l = [(i, j) for i in range(5) for j in range(5)]
+# print(l)
 
 
