@@ -634,5 +634,15 @@ from functools import reduce
 #
 # l = [(i, j) for i in range(5) for j in range(5)]
 # print(l)
-
+#
+# try:
+#     f = open('Applications/data/personal_info.csv')
+# except:
+#     pass
+# finally:
+#     f.close()
+#
+#
+# with open('Applications/data/personal_info.csv') as f:
+#     print(f.read())
 
