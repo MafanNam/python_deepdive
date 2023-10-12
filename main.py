@@ -646,3 +646,12 @@ from functools import reduce
 # with open('Applications/data/personal_info.csv') as f:
 #     print(f.read())
 
+
+# def test():
+#     with open('Applications/data/personal_info.csv', 'w') as file:
+#         print('inside with: file close', file.closed)
+#         return file
+#         print('here - will never run')
+#
+# file = test()
+
