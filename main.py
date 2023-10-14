@@ -655,3 +655,59 @@ from functools import reduce
 #
 # file = test()
 
+#
+# class SubItem:
+#     def __init__(self, title, prefix='- ', indent=3):
+#         self._title = title
+#         self._prefix = prefix
+#         self._indent = indent
+#         self._current_indent = 0
+#         print(title)
+#
+#     def __enter__(self):
+#         self._current_indent += self._indent
+#         return self
+#
+#     def __exit__(self, exc_type, exc_val, exc_tb):
+#         self._current_indent -= self._indent
+#         return False
+#
+#     def print(self, arg):
+#         s = ' ' * self._current_indent + self._prefix + str(arg)
+#         print(s)
+#
+# lm = SubItem('Main')
+# with lm:
+#     lm.print('P_1')
+#
+#     with lm:
+#         lm.print('P_2')
+#
+#
+# with lm:
+#     lm.print('P_1')
+#
+#     with lm:
+#         lm.print('P_2')
+#
+#         with lm:
+#             lm.print('P_3')
+#             lm.print('P_3_1')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
