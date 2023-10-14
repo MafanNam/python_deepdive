@@ -695,6 +695,25 @@ from functools import reduce
 #             lm.print('P_3_1')
 
 
+from time import perf_counter, sleep
+from contextlib import contextmanager
+
+@contextmanager
+def timer():
+    stars = dict()
+    start = perf_counter()
+    stars['start'] = start
+    try:
+        yield stars
+    finally:
+        end = perf_counter()
+        stars['end'] = end
+        stars['elapsed'] = end - start
+
+with timer() as t:
+    sleep(2)
+
+print(t)
 
 
 
