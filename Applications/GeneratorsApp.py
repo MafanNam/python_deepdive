@@ -1,7 +1,7 @@
 from collections import namedtuple
 from datetime import datetime
 
-with open('nyc_parking_tickets_extract.csv') as f:
+with open('data/nyc_parking_tickets_extract.csv') as f:
     column_headers = next(f).strip().split(',')
     data = (i.strip().split(',') for i in f)
 
@@ -10,7 +10,7 @@ Ticket = namedtuple('Ticket', column_names)
 
 
 def read_data():
-    with open('nyc_parking_tickets_extract.csv') as f:
+    with open('data/nyc_parking_tickets_extract.csv') as f:
         next(f)
         yield from f
 

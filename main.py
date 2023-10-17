@@ -628,5 +628,110 @@ from functools import reduce
 # s_map = map(int, s.split(' '))
 # print(list(s_map))
 
+# for i in range(5):
+#     for j in range(5):
+#         print(i, j)
+#
+# l = [(i, j) for i in range(5) for j in range(5)]
+# print(l)
+#
+# try:
+#     f = open('Applications/data/personal_info.csv')
+# except:
+#     pass
+# finally:
+#     f.close()
+#
+#
+# with open('Applications/data/personal_info.csv') as f:
+#     print(f.read())
+
+
+# def test():
+#     with open('Applications/data/personal_info.csv', 'w') as file:
+#         print('inside with: file close', file.closed)
+#         return file
+#         print('here - will never run')
+#
+# file = test()
+
+#
+# class SubItem:
+#     def __init__(self, title, prefix='- ', indent=3):
+#         self._title = title
+#         self._prefix = prefix
+#         self._indent = indent
+#         self._current_indent = 0
+#         print(title)
+#
+#     def __enter__(self):
+#         self._current_indent += self._indent
+#         return self
+#
+#     def __exit__(self, exc_type, exc_val, exc_tb):
+#         self._current_indent -= self._indent
+#         return False
+#
+#     def print(self, arg):
+#         s = ' ' * self._current_indent + self._prefix + str(arg)
+#         print(s)
+#
+# lm = SubItem('Main')
+# with lm:
+#     lm.print('P_1')
+#
+#     with lm:
+#         lm.print('P_2')
+#
+#
+# with lm:
+#     lm.print('P_1')
+#
+#     with lm:
+#         lm.print('P_2')
+#
+#         with lm:
+#             lm.print('P_3')
+#             lm.print('P_3_1')
+
+
+# from time import perf_counter, sleep
+# # from contextlib import contextmanager
+# #
+# # @contextmanager
+# # def timer():
+# #     stars = dict()
+# #     start = perf_counter()
+# #     stars['start'] = start
+# #     try:
+# #         yield stars
+# #     finally:
+# #         end = perf_counter()
+# #         stars['end'] = end
+# #         stars['elapsed'] = end - start
+# #
+# # with timer() as t:
+# #     sleep(2)
+# #
+# # print(t)
+
+# d1 = {'a': 1, 'b': 2, 'c': 3}
+# d2 = {'c': 30, 'd': 40}
+#
+# print(d1 | d2)
+# print(d2 | d1)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
