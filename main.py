@@ -721,14 +721,26 @@ from functools import reduce
 # print(d1 | d2)
 # print(d2 | d1)
 
+John = 'John'
+Eric = 'Eric'
+Michael = 'Michael'
+Graham = 'Graham'
+
+persons = [('john', John),
+           ('eric', Eric),
+           ('michael', Michael),
+           ('graham', Graham), ]
 
 
+def search_person(search):
+    for person in persons:
+        if search == person[0]:
+            return person[1]
+    return 'Nothing'
 
 
-
-
-
-
+search = input('Search person: ')
+print(search_person(search))
 
 
 
