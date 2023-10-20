@@ -721,29 +721,91 @@ from functools import reduce
 # print(d1 | d2)
 # print(d2 | d1)
 
-John = 'John'
-Eric = 'Eric'
-Michael = 'Michael'
-Graham = 'Graham'
+# John = 'John'
+# Eric = 'Eric'
+# Michael = 'Michael'
+# Graham = 'Graham'
+#
+# persons = [('john', John),
+#            ('eric', Eric),
+#            ('michael', Michael),
+#            ('graham', Graham), ]
+#
+#
+# def search_person(search):
+#     for person in persons:
+#         if search == person[0]:
+#             return person[1]
+#     return 'Nothing'
+#
+#
+# search = input('Search person: ')
+# print(search_person(search))
+#
+#
+#
+# def generate_difference_table(x_values, y_values):
+#     n = len(x_values)
+#     difference_table = [[0] * n for _ in range(n)]
+#
+#     for i in range(n):
+#         difference_table[i][0] = y_values[i]
+#
+#     for j in range(1, n):
+#         for i in range(n - j):
+#             difference_table[i][j] = difference_table[i + 1][j - 1] - difference_table[i][j - 1]
+#
+#     return difference_table
+#
+# h = 0.5
+#
+# def calculate_derivative_1():
+#     q = 0.76
+#     derivative_1 = (1 / h) * (-0.42+( (2 * q - 1) / 2) * (0.01) +( (3 * q ** 2 - 6 * q + 2) / 6) * 0.06 + ((
+#             2 * q ** 3 - 9 * q ** 2 + 11 * q - 3) / 12) * 0.015)
+#     return derivative_1
+#
+# def calculate_second_derivative_1():
+#     q = 0.76
+#     second_derivative_1 = (1 / (h**2)) * (0.01 + (q - 1) * 0.06 + ((6 * (q ** 2) - 18 * q + 11) / 12) * 0.0015)
+#     return second_derivative_1
+#
+# def calculate_derivative_2():
+#     q = 0.76
+#     derivative_2 = (1 / h) * (-0.195 +((2 * q - 1) / 2) * (0.235) +( (3 * q ** 2 - 6 * q + 2) / 6) * 0.105 + ((
+#             2 * q ** 3 - 9 * q ** 2 + 11 * q - 3) / 12) * (0.014))
+#     return derivative_2
+#
+# def calculate_second_derivative_2():
+#     q = 0.76
+#     second_derivative_2 = (1 / (h ** 2)) * (0.235 + (q - 1) * 0.105 + ((6 * (q ** 2) - 18 * q + 11) / 12) * (0.014))
+#     return second_derivative_2
+#
+# derivative_1 = calculate_derivative_1()
+# print(f"Похідна в точці 2.88 = {derivative_1:.3f}")
+#
+# second_derivative_1 = calculate_second_derivative_1()
+# print(f"Друга похідна в точці 2.88 = {second_derivative_1:.3f}")
+#
+# derivative_2 = calculate_derivative_2()
+# print(f"Похідна в точці 4.38 = {derivative_2:.3f}")
+#
+# second_derivative_2 = calculate_second_derivative_2()
+# print(f"Друга похідна в точці 4.38 = {second_derivative_2:.3f}")
 
-persons = [('john', John),
-           ('eric', Eric),
-           ('michael', Michael),
-           ('graham', Graham), ]
-
-
-def search_person(search):
-    for person in persons:
-        if search == person[0]:
-            return person[1]
-    return 'Nothing'
-
-
-search = input('Search person: ')
-print(search_person(search))
-
-
-
+# d = {i: i**2 for i in range(1, 6)}
+# print(d)
+#
+# print(list(d.keys()))
+# print(d.items())
+#
+# import random
+#
+# a = [i for i in range(10)]
+# random.shuffle(a)
+#
+# print(a)
+# print(set(a))
 
 
 
