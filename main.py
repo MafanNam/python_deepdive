@@ -807,5 +807,18 @@ from functools import reduce
 # print(a)
 # print(set(a))
 
+def polynomial_value(x):
+    return 0.374 * x**5 + 0.583 * x**4 - 1.072 * x**3 + 1.548 * x**2 - 2.436 * x - 0.367
+
+x_values = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+h = 0.25
+
+table = []
+
+for x in x_values:
+    table.append((x, polynomial_value(x)))
+
+for entry in table:
+    print(f"x = {entry[0]}, P(x) = {entry[1]}")
 
 
