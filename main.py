@@ -822,3 +822,14 @@ from functools import reduce
 #     print(f"x = {entry[0]}, P(x) = {entry[1]}")
 
 
+# def f(**kwargs):
+#     print(kwargs)
+#
+# d = {'1': 1, '2': 2}
+# print(f(**d))
+
+
+
+
+
+
