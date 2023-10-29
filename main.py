@@ -828,8 +828,18 @@ from functools import reduce
 # d = {'1': 1, '2': 2}
 # print(f(**d))
 
-
-
-
-
-
+# a = 10
+# b = 10
+#
+# print(a is b)
+#
+# a = (10, 10)
+# b = (10, 10)
+#
+# print(a is b)
+#
+# a = [10, 10]
+# b = [10, 10]
+#
+# print(a is b)
+# print(True or True)
