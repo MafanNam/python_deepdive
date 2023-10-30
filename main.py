@@ -843,3 +843,23 @@ from functools import reduce
 #
 # print(a is b)
 # print(True or True)
+
+
+# d = dict(zip('abc', range(1, 4)))
+#
+# item = list(d.items())
+#
+# for k, v in item:
+#     print(k, v)
+#     del d['c']
+
+
+
+
+
+
+
+
+
+
+
