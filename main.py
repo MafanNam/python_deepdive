@@ -853,6 +853,13 @@ from functools import reduce
 #     print(k, v)
 #     del d['c']
 
+# import json
+# from datetime import datetime
+#
+# d = {'time': '111122', 'a': 111, 'hahha': 'sksksksk'}
+#
+# print(json.dumps(d, indent=10))
+
 
 
 
