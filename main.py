@@ -859,9 +859,38 @@ from functools import reduce
 # d = {'time': '111122', 'a': 111, 'hahha': 'sksksksk'}
 #
 # print(json.dumps(d, indent=10))
+# from collections import defaultdict
+#
+# d = defaultdict(lambda : 1)
+#
+# print(d['a'])
+# print(d)
 
 
 
+# from collections import Counter
+#
+# counter = Counter()
+#
+# sentence = 'kdsfksdfk ksdkfdk ferkfr kfke'
+#
+# for c in sentence:
+#     counter[c] += 1
+#
+# print(counter)
+
+# from collections import ChainMap
+#
+# d1 = {'a': 1}
+# d2 = {'a': 2}
+# d3 = {'a': 0}
+#
+# d = ChainMap(d1, d2, d3)
+#
+# print(d, id(d))
+# d4 = {'d': 2}
+# dd = d.new_child(d4)
+# print(dd, id(dd))
 
 
 
