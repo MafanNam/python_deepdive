@@ -881,9 +881,9 @@ from functools import reduce
 
 # from collections import ChainMap
 #
-# d1 = {'a': 1}
-# d2 = {'a': 2}
-# d3 = {'a': 0}
+# d1 = {'a': 1, 'b': 2}
+# d2 = {'c': 3, 'd': 4}
+# d3 = {'e': 5, 'f': 6}
 #
 # d = ChainMap(d1, d2, d3)
 #
@@ -891,7 +891,13 @@ from functools import reduce
 # d4 = {'d': 2}
 # dd = d.new_child(d4)
 # print(dd, id(dd))
-
+# for k, v in d.items():
+#     print(k, v)
+#
+# d = ChainMap(d1, d2, d3)
+#
+# for k, v in d.items():
+#     print(k, v)
 
 
 
