@@ -29,10 +29,10 @@
 # print(id(a), id(b))
 # print(a == b)
 
-import sys
-import datetime
-from fractions import Fraction
-from functools import reduce
+# import sys
+# import datetime
+# from fractions import Fraction
+# from functools import reduce
 
 # print(sys.getsizeof(443773373737**444))
 
@@ -899,9 +899,61 @@ from functools import reduce
 # for k, v in d.items():
 #     print(k, v)
 
+# class MyClass:
+#     language = 'Python'
+#
+# d = MyClass
+#
+# print(d.language)
+
+# def solution(nums):
+#     if nums:
+#         l = []
+#         n = len(nums)
+#         for _ in range(n):
+#             min_v = min(nums)
+#             l.append(min_v)
+#             del nums[nums.index(min_v)]
+#         return l
+#     return []
+#
+# print(solution([1,2,3,10,5]))
 
 
+# class My:
+#     def f(obj):
+#         return 'hello'
+#
+#
+# my = My()
+# # print(my.f())
+#
+# print(my.f, hex(id(my)))
 
 
-
+# class Class:
+#     def __init__(self):
+#         self.__a = 10
+#
+# cl = Class()
+# print(cl.__a)
+#
+# class Person:
+#     def __init__(self, name):
+#         self._name = name
+#
+#     @property
+#     def name(self):
+#         return self._name
+#
+#     @name.setter
+#     def name(self, value):
+#         self._name = value
+#
+#
+# p = Person('Jons')
+#
+# print(p.name)
+# p.name = 0
+# print(p.name)
 
