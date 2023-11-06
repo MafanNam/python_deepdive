@@ -1,6 +1,7 @@
 # a = 'hello'
 #
 # print(list(enumerate(a)))
+import math
 
 
 # class Rectangle:
@@ -867,7 +868,6 @@
 # print(d)
 
 
-
 # from collections import Counter
 #
 # counter = Counter()
@@ -957,3 +957,25 @@
 # p.name = 0
 # print(p.name)
 
+
+class Area:
+    def __init__(self, r):
+        self._r = r
+        self._area = None
+
+    @property
+    def r(self):
+        return self._r
+
+    @r.setter
+    def r(self, r):
+        if r < 0:
+            raise ValueError
+        self._r = r
+        self._area = None
+
+    @property
+    def area(self):
+        if self._area is None:
+            self._area = math.pi * (self._r ** 2)
+        return self._area
