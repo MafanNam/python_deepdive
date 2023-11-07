@@ -957,25 +957,61 @@ import math
 # p.name = 0
 # print(p.name)
 
+#
+# class Area:
+#     def __init__(self, r):
+#         self._r = r
+#         self._area = None
+#
+#     @property
+#     def r(self):
+#         return self._r
+#
+#     @r.setter
+#     def r(self, r):
+#         if r < 0:
+#             raise ValueError
+#         self._r = r
+#         self._area = None
+#
+#     @property
+#     def area(self):
+#         if self._area is None:
+#             self._area = math.pi * (self._r ** 2)
+#         return self._area
 
-class Area:
-    def __init__(self, r):
-        self._r = r
-        self._area = None
 
-    @property
-    def r(self):
-        return self._r
+# class Person:
+#     def __init__(self, name, age):
+#         self._name = name
+#         self.age = age
+#
+#     @property
+#     def name(self):
+#         return self._name
+#
+#     @name.setter
+#     def name(self, value):
+#         self._name = value
+#
+#     @name.deleter
+#     def name(self):
+#         del self._name
+#         self.age = None
+#
+# p = Person('Vadim', 20)
+# print(p.name, p.age)
+#
+# del p.name
 
-    @r.setter
-    def r(self, r):
-        if r < 0:
-            raise ValueError
-        self._r = r
-        self._area = None
 
-    @property
-    def area(self):
-        if self._area is None:
-            self._area = math.pi * (self._r ** 2)
-        return self._area
+
+
+
+
+
+
+
+
+
+
