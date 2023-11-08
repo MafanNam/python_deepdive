@@ -1005,13 +1005,88 @@ import math
 # del p.name
 
 
+# from datetime import datetime, timezone, timedelta
+
+# class Timer:
+#     tz = timezone.utc
+#
+#     @classmethod
+#     def set_tz(cls, offset, name):
+#         cls.tz = timezone(timedelta(hours=offset), name=name)
+
+
+# t1 = Timer()
+# t2 = Timer()
+#
+# print(t1.tz, t2.tz)
+# t1.set_tz(-8, 'PST')
+#
+# print(t1.tz, t2.tz)
 
 
 
+# class Timer:
+#     tz = timezone.utc
+#
+#     @classmethod
+#     def set_tz(cls, offset, name):
+#         cls.tz = timezone(timedelta(hours=offset), name=name)
+#
+#     @staticmethod
+#     def current_dt_utc():
+#         return datetime.now(timezone.utc)
+#
+#     @classmethod
+#     def current_dt(cls):
+#         return datetime.now(cls.tz)
+#
+#     def start(self):
+#         self._time_start = self.current_dt_utc()
+#         self._time_end = None
+#
+#     def stop(self):
+#         if self._time_start is None:
+#             raise Exception('Timer must be started')
+#         self._time_end = self.current_dt_utc()
+#
+#
+#     @property
+#     def start_time(self):
+#         if self._time_start is None:
+#             raise Exception('Timer has not started')
+#         return self._time_start.astimezone(self.tz)
+#
+#     @property
+#     def end_time(self):
+#         if self._time_end is None:
+#             raise Exception('Timer has not stopped')
+#         return self.current_dt_utc().astimezone(self.tz)
+#
+#     @property
+#     def elapsed(self):
+#         if self._time_start is None:
+#             raise Exception('Timer must be started before')
+#         if self._time_end is None:
+#             elapsed_time = self.current_dt_utc() - self._time_start
+#         else:
+#             elapsed_time = self._time_end - self._time_start
+#         return elapsed_time.total_seconds()
 
 
+from time import sleep
+
+# t1 = Timer()
+# t1.start()
+# sleep(2)
+# t1.stop()
+# print(f"Start time: {t1.start_time}")
+# print(f"End time: {t1.end_time}")
+# print(f"Elapsed time: {t1.elapsed} seconds")
 
 
-
-
-
+# t2 = Timer()
+# t2.start()
+# sleep(3)
+# print(f"Start time: {t2.start_time}")
+# # print(f"End time: {t2.end_time}")
+# print(f"Elapsed time: {t2.elapsed} seconds")
