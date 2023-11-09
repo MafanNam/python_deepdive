@@ -1092,23 +1092,31 @@ from time import sleep
 # print(f"Elapsed time: {t2.elapsed} seconds")
 
 
-class Language:
-    MAJOR = 4
-    MINOR = 1
+# class Language:
+#     MAJOR = 4
+#     MINOR = 1
+#
+#     @classmethod
+#     def cls_version(cls):
+#         return f"{cls.MAJOR}.{cls.MINOR}"
+#
+#     def static_version(self):
+#         return f"{self.MAJOR}.{self.MINOR}"
+#
+# l = Language()
+# print(l.cls_version())
+#
+#
+# Language.MAJOR = 0
+#
+# print(l.cls_version())
+# l.MAJOR = 10
+# print(l.static_version())
 
-    @classmethod
-    def cls_version(cls):
-        return f"{cls.MAJOR}.{cls.MINOR}"
-
-    def static_version(self):
-        return f"{self.MAJOR}.{self.MINOR}"
-
-l = Language()
-print(l.cls_version())
-
-
-Language.MAJOR = 0
-
-print(l.cls_version())
-l.MAJOR = 10
-print(l.static_version())
+# class Cl:
+#     def __str__(self):
+#         return 'haha'
+#
+#
+# c = Cl()
+# print(str(c))

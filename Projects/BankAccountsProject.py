@@ -122,6 +122,7 @@ class TimeZone:
                 f"offset_hours={self._offset_hours}, "
                 f"offset_minutes={self._offset_minutes})")
 
+
 # tz1 = TimeZone('ABC', -2, -15)
 # print(tz1.name)
 #
@@ -297,8 +298,6 @@ class Account:
 
 Confirmation = namedtuple('Confirmation', 'account_number transaction_code transaction_id time_utc time')
 
-
-
 # try:
 #     a = Account(1234, 'Alex', 'Suck')
 # except ValueError as ex:
@@ -337,18 +336,3 @@ print(a.balance)
 print(a.pay_interest())
 
 print(a.balance)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
