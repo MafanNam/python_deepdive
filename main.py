@@ -1120,3 +1120,19 @@ from time import sleep
 #
 # c = Cl()
 # print(str(c))
+
+# class Class:
+#     def __call__(self, *args, **kwargs):
+#         return f"fooffo"
+#
+#
+# a = Class()
+# print(a())
+
+# count = 0
+#
+# def default():
+#     global count
+#     count += 1
+
+
