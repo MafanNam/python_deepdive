@@ -1,6 +1,7 @@
 # a = 'hello'
 #
 # print(list(enumerate(a)))
+import math
 
 
 # class Rectangle:
@@ -29,10 +30,10 @@
 # print(id(a), id(b))
 # print(a == b)
 
-import sys
-import datetime
-from fractions import Fraction
-from functools import reduce
+# import sys
+# import datetime
+# from fractions import Fraction
+# from functools import reduce
 
 # print(sys.getsizeof(443773373737**444))
 
@@ -867,7 +868,6 @@ from functools import reduce
 # print(d)
 
 
-
 # from collections import Counter
 #
 # counter = Counter()
@@ -899,9 +899,269 @@ from functools import reduce
 # for k, v in d.items():
 #     print(k, v)
 
+# class MyClass:
+#     language = 'Python'
+#
+# d = MyClass
+#
+# print(d.language)
+
+# def solution(nums):
+#     if nums:
+#         l = []
+#         n = len(nums)
+#         for _ in range(n):
+#             min_v = min(nums)
+#             l.append(min_v)
+#             del nums[nums.index(min_v)]
+#         return l
+#     return []
+#
+# print(solution([1,2,3,10,5]))
+
+
+# class My:
+#     def f(obj):
+#         return 'hello'
+#
+#
+# my = My()
+# # print(my.f())
+#
+# print(my.f, hex(id(my)))
+
+
+# class Class:
+#     def __init__(self):
+#         self.__a = 10
+#
+# cl = Class()
+# print(cl.__a)
+#
+# class Person:
+#     def __init__(self, name):
+#         self._name = name
+#
+#     @property
+#     def name(self):
+#         return self._name
+#
+#     @name.setter
+#     def name(self, value):
+#         self._name = value
+#
+#
+# p = Person('Jons')
+#
+# print(p.name)
+# p.name = 0
+# print(p.name)
+
+#
+# class Area:
+#     def __init__(self, r):
+#         self._r = r
+#         self._area = None
+#
+#     @property
+#     def r(self):
+#         return self._r
+#
+#     @r.setter
+#     def r(self, r):
+#         if r < 0:
+#             raise ValueError
+#         self._r = r
+#         self._area = None
+#
+#     @property
+#     def area(self):
+#         if self._area is None:
+#             self._area = math.pi * (self._r ** 2)
+#         return self._area
+
+
+# class Person:
+#     def __init__(self, name, age):
+#         self._name = name
+#         self.age = age
+#
+#     @property
+#     def name(self):
+#         return self._name
+#
+#     @name.setter
+#     def name(self, value):
+#         self._name = value
+#
+#     @name.deleter
+#     def name(self):
+#         del self._name
+#         self.age = None
+#
+# p = Person('Vadim', 20)
+# print(p.name, p.age)
+#
+# del p.name
+
+
+# from datetime import datetime, timezone, timedelta
+
+# class Timer:
+#     tz = timezone.utc
+#
+#     @classmethod
+#     def set_tz(cls, offset, name):
+#         cls.tz = timezone(timedelta(hours=offset), name=name)
+
+
+# t1 = Timer()
+# t2 = Timer()
+#
+# print(t1.tz, t2.tz)
+# t1.set_tz(-8, 'PST')
+#
+# print(t1.tz, t2.tz)
 
 
 
+# class Timer:
+#     tz = timezone.utc
+#
+#     @classmethod
+#     def set_tz(cls, offset, name):
+#         cls.tz = timezone(timedelta(hours=offset), name=name)
+#
+#     @staticmethod
+#     def current_dt_utc():
+#         return datetime.now(timezone.utc)
+#
+#     @classmethod
+#     def current_dt(cls):
+#         return datetime.now(cls.tz)
+#
+#     def start(self):
+#         self._time_start = self.current_dt_utc()
+#         self._time_end = None
+#
+#     def stop(self):
+#         if self._time_start is None:
+#             raise Exception('Timer must be started')
+#         self._time_end = self.current_dt_utc()
+#
+#
+#     @property
+#     def start_time(self):
+#         if self._time_start is None:
+#             raise Exception('Timer has not started')
+#         return self._time_start.astimezone(self.tz)
+#
+#     @property
+#     def end_time(self):
+#         if self._time_end is None:
+#             raise Exception('Timer has not stopped')
+#         return self.current_dt_utc().astimezone(self.tz)
+#
+#     @property
+#     def elapsed(self):
+#         if self._time_start is None:
+#             raise Exception('Timer must be started before')
+#         if self._time_end is None:
+#             elapsed_time = self.current_dt_utc() - self._time_start
+#         else:
+#             elapsed_time = self._time_end - self._time_start
+#         return elapsed_time.total_seconds()
 
 
+from time import sleep
 
+# t1 = Timer()
+# t1.start()
+# sleep(2)
+# t1.stop()
+# print(f"Start time: {t1.start_time}")
+# print(f"End time: {t1.end_time}")
+# print(f"Elapsed time: {t1.elapsed} seconds")
+
+
+# t2 = Timer()
+# t2.start()
+# sleep(3)
+# print(f"Start time: {t2.start_time}")
+# # print(f"End time: {t2.end_time}")
+# print(f"Elapsed time: {t2.elapsed} seconds")
+
+
+# class Language:
+#     MAJOR = 4
+#     MINOR = 1
+#
+#     @classmethod
+#     def cls_version(cls):
+#         return f"{cls.MAJOR}.{cls.MINOR}"
+#
+#     def static_version(self):
+#         return f"{self.MAJOR}.{self.MINOR}"
+#
+# l = Language()
+# print(l.cls_version())
+#
+#
+# Language.MAJOR = 0
+#
+# print(l.cls_version())
+# l.MAJOR = 10
+# print(l.static_version())
+
+# class Cl:
+#     def __str__(self):
+#         return 'haha'
+#
+#
+# c = Cl()
+# print(str(c))
+
+# class Class:
+#     def __call__(self, *args, **kwargs):
+#         return f"fooffo"
+#
+#
+# a = Class()
+# print(a())
+
+# count = 0
+#
+# def default():
+#     global count
+#     count += 1
+
+# class Person:
+#     pass
+#
+# class Child(Person):
+#     pass
+#
+# class Girl(Child):
+#     pass
+#
+# c = Child()
+# g = Girl()
+# print(isinstance(c, Person))
+# print(isinstance(g, Person))
+
+# class Person:
+#     pass
+#
+# print(Person.__init__ is object.__init__)
+
+
+# class Point:
+#     __slots__ = ('x', 'y',)
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+# p = Point(0, 0)
+# # p.__dict__
+# print(dir(p))
+# print(p.x)
