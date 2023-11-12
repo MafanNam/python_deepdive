@@ -1135,4 +1135,33 @@ from time import sleep
 #     global count
 #     count += 1
 
+# class Person:
+#     pass
+#
+# class Child(Person):
+#     pass
+#
+# class Girl(Child):
+#     pass
+#
+# c = Child()
+# g = Girl()
+# print(isinstance(c, Person))
+# print(isinstance(g, Person))
 
+# class Person:
+#     pass
+#
+# print(Person.__init__ is object.__init__)
+
+
+# class Point:
+#     __slots__ = ('x', 'y',)
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+# p = Point(0, 0)
+# # p.__dict__
+# print(dir(p))
+# print(p.x)
