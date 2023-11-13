@@ -1165,3 +1165,19 @@ from time import sleep
 # # p.__dict__
 # print(dir(p))
 # print(p.x)
+#
+#
+# from datetime import datetime
+#
+# class TimeUTC:
+#     def __get__(self, instance, owner):
+#         return datetime.utcnow().isoformat()
+#
+# class Logger:
+#     current_time = TimeUTC()
+#
+# l = Logger()
+# print(l.current_time)
+
+
+
