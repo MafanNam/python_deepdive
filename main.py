@@ -1178,6 +1178,14 @@ from time import sleep
 #
 # l = Logger()
 # print(l.current_time)
+#
+# class Person:
+#     pass
+#
+# print(Person.__dict__)
+# print(Person.__weakref__)
+
+
 
 
 
