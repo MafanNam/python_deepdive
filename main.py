@@ -1185,6 +1185,18 @@ from time import sleep
 # print(Person.__dict__)
 # print(Person.__weakref__)
 
+# import enum
+#
+# class Enum(enum.Enum):
+#     RED = 1
+#     BLUE = 2
+#     GREEN = 3
+#
+# class Person:
+#     COLOR = Enum(1)
+#
+# p = Person()
+# print(p.COLOR.value)
 
 
 
