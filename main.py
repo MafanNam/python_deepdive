@@ -1199,5 +1199,11 @@ from time import sleep
 # print(p.COLOR.value)
 
 
-
+# import enum
+#
+# @enum.unique
+# class Status(enum.Enum):
+#     ready = 1
+#     waiting = ready
+#     ok = 2
 
