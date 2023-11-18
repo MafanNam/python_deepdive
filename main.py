@@ -1207,3 +1207,23 @@ from time import sleep
 #     waiting = ready
 #     ok = 2
 
+
+# try:
+#     raise ValueError('f', 'g')
+# except ValueError as ex:
+#     print(ex.args[0])
+#
+# for i in range(5):
+#     a = 'f'
+# else:
+#     print('g')
+
+
+
+
+
+
+
+
+
+
