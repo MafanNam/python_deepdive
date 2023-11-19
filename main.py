@@ -1218,8 +1218,33 @@ from time import sleep
 # else:
 #     print('g')
 
+# print(type(type))
+# print(type, ...)
 
-
+# class Prson(metaclass='ff'):
+#     pass
+#
+# class MyType(type):
+#     def __new__(cls, *args, **kwargs):
+#         return 'f'
+#
+#
+# class Person(metaclass=MyType):
+#     pass
+#
+# p = Person
+# print(p)
+#
+# class My:
+#     def __new__(cls, *args, **kwargs):
+#         return 'f'
+#
+#
+# class Person2(My):
+#     pass
+#
+# p2 = Person2()
+# print(p2)
 
 
 
