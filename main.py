@@ -1246,8 +1246,37 @@ from time import sleep
 # p2 = Person2()
 # print(p2)
 
+def savings(cls):
+    cls.account_type = 'savings'
+    return cls
 
 
+def checking(cls):
+    cls.account_type = 'checking'
+
+
+class Account:
+    pass
+
+
+@savings
+class Bank1Savings(Account):
+    pass
+
+
+@savings
+class Bank2Savings(Account):
+    pass
+
+
+@checking
+class Bank1checking(Account):
+    pass
+
+
+@checking
+class Bank2checking(Account):
+    pass
 
 
 
