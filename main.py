@@ -1245,38 +1245,83 @@ from time import sleep
 #
 # p2 = Person2()
 # print(p2)
+#
+# def savings(cls):
+#     cls.account_type = 'savings'
+#     return cls
+#
+#
+# def checking(cls):
+#     cls.account_type = 'checking'
+#
+#
+# class Account:
+#     pass
+#
+#
+# @savings
+# class Bank1Savings(Account):
+#     pass
+#
+#
+# @savings
+# class Bank2Savings(Account):
+#     pass
+#
+#
+# @checking
+# class Bank1checking(Account):
+#     pass
+#
+#
+# @checking
+# class Bank2checking(Account):
+#     pass
 
-def savings(cls):
-    cls.account_type = 'savings'
-    return cls
+# if isinstance(['3'], (int, list)):
+#     print('haha')
+
+# class My:
+#     pass
+#
+# print(type(vars(My)))
+# print(vars(My))
 
 
-def checking(cls):
-    cls.account_type = 'checking'
+from collections import OrderedDict
 
 
-class Account:
+class MyMeta(type):
+    @classmethod
+    def __prepare__(metacls, name, bases):
+        d = OrderedDict()
+        d['f'] = 'dff'
+        return d
+
+
+class MyClass(metaclass=MyMeta):
     pass
 
-
-@savings
-class Bank1Savings(Account):
-    pass
-
-
-@savings
-class Bank2Savings(Account):
-    pass
+# print(vars(MyClass))
+# p = MyClass()
+#
+# print(p.__dict__)
 
 
-@checking
-class Bank1checking(Account):
-    pass
 
 
-@checking
-class Bank2checking(Account):
-    pass
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
