@@ -106,48 +106,75 @@
 
 
 # --------------------app-2-----------------------
-
-
-# class Hundred:
-#     _existing_instance = None
 #
-#     def __new__(cls):
-#         if not cls._existing_instance:
-#             print('creating new instance...')
-#             new_instance = super().__new__(cls)
-#             setattr(new_instance, 'name', 'hundred')
-#             setattr(new_instance, 'value', 100)
-#             cls._existing_instance = new_instance
+#
+# # class Hundred:
+# #     _existing_instance = None
+# #
+# #     def __new__(cls):
+# #         if not cls._existing_instance:
+# #             print('creating new instance...')
+# #             new_instance = super().__new__(cls)
+# #             setattr(new_instance, 'name', 'hundred')
+# #             setattr(new_instance, 'value', 100)
+# #             cls._existing_instance = new_instance
+# #         else:
+# #             print('instance exists already, using that one...')
+# #         return cls._existing_instance
+#
+#
+# # h1 = Hundred()
+# #
+# # h2 = Hundred()
+# #
+# # print(h1 is h2)
+#
+#
+# class Singleton(type):
+#     instances = {}
+#
+#     def __call__(cls, *args, **kwargs):
+#         print(f"Request received to create an instance of class: {cls}...")
+#         existing_instance = Singleton.instances.get(cls, None)
+#         if existing_instance is None:
+#             print('Creating instance for the first time...')
+#             Singleton.instances[cls] = super().__call__(*args, **kwargs)
 #         else:
-#             print('instance exists already, using that one...')
-#         return cls._existing_instance
-
-
-# h1 = Hundred()
+#             print('Using existing instance...')
+#         return Singleton.instances[cls]
 #
-# h2 = Hundred()
 #
-# print(h1 is h2)
+# class Hundred(metaclass=Singleton):
+#     value = 100
 
 
-class Singleton(type):
-    instances = {}
-
-    def __call__(cls, *args, **kwargs):
-        print(f"Request received to create an instance of class: {cls}...")
-        existing_instance = Singleton.instances.get(cls, None)
-        if existing_instance is None:
-            print('Creating instance for the first time...')
-            Singleton.instances[cls] = super().__call__(*args, **kwargs)
-        else:
-            print('Using existing instance...')
-        return Singleton.instances[cls]
+# --------------------app-3-----------------------
+import configparser
 
 
-class Hundred(metaclass=Singleton):
-    value = 100
+with open('prod.ini', 'w') as prod, open('dev.ini', 'w') as dev:
+    prod.write('[Database]\n')
+    prod.write('db_host=prod.mynetwork.com\n')
+    prod.write('db_name=my_database\n')
+    prod.write('\n[Server]\n')
+    prod.write('port=8080\n')
+
+    dev.write('[Database]\n')
+    dev.write('db_host=dev.mynetwork.com\n')
+    dev.write('db_name=my_database\n')
+    dev.write('\n[Server]\n')
+    dev.write('port=3000\n')
 
 
+class Config:
+    def __init__(self, env='dev'):
+        print(f"Loading config from {env} file")
+        config = configparser.ConfigParser()
+        file_name = f"{env}.ini"
+        config.read(file_name)
+        self.db_host = config['Database']['db_host']
+        self.db_name = config['Database']['db_name']
+        self.port = config['Server']['port']
 
 
 
