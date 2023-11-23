@@ -1286,28 +1286,45 @@ from time import sleep
 #
 # print(type(vars(My)))
 # print(vars(My))
-
-
-from collections import OrderedDict
-
-
-class MyMeta(type):
-    @classmethod
-    def __prepare__(metacls, name, bases):
-        d = OrderedDict()
-        d['f'] = 'dff'
-        return d
-
-
-class MyClass(metaclass=MyMeta):
-    pass
+#
+#
+# from collections import OrderedDict
+#
+#
+# class MyMeta(type):
+#     @classmethod
+#     def __prepare__(metacls, name, bases):
+#         d = OrderedDict()
+#         d['f'] = 'dff'
+#         return d
+#
+#
+# class MyClass(metaclass=MyMeta):
+#     pass
 
 # print(vars(MyClass))
 # p = MyClass()
 #
 # print(p.__dict__)
 
-
+# class MyMeta(type):
+#     def __setattr__(self, key, value):
+#         print('setting class attribute...')
+#         super().__setattr__(key, value)
+#
+#
+# class Person(metaclass=MyMeta):
+#     def __setattr__(self, key, value):
+#         print('setting instance attribute...')
+#         super().__setattr__(key, value)
+#
+# Person.test_1 = 'test'
+#
+# p = Person()
+# p.test_2 = 'test_2'
+# print(Person.__dict__)
+# print(p.__dict__)
+# print(p.test_1)
 
 
 
