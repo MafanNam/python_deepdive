@@ -1165,3 +1165,181 @@ from time import sleep
 # # p.__dict__
 # print(dir(p))
 # print(p.x)
+#
+#
+# from datetime import datetime
+#
+# class TimeUTC:
+#     def __get__(self, instance, owner):
+#         return datetime.utcnow().isoformat()
+#
+# class Logger:
+#     current_time = TimeUTC()
+#
+# l = Logger()
+# print(l.current_time)
+#
+# class Person:
+#     pass
+#
+# print(Person.__dict__)
+# print(Person.__weakref__)
+
+# import enum
+#
+# class Enum(enum.Enum):
+#     RED = 1
+#     BLUE = 2
+#     GREEN = 3
+#
+# class Person:
+#     COLOR = Enum(1)
+#
+# p = Person()
+# print(p.COLOR.value)
+
+
+# import enum
+#
+# @enum.unique
+# class Status(enum.Enum):
+#     ready = 1
+#     waiting = ready
+#     ok = 2
+
+
+# try:
+#     raise ValueError('f', 'g')
+# except ValueError as ex:
+#     print(ex.args[0])
+#
+# for i in range(5):
+#     a = 'f'
+# else:
+#     print('g')
+
+# print(type(type))
+# print(type, ...)
+
+# class Prson(metaclass='ff'):
+#     pass
+#
+# class MyType(type):
+#     def __new__(cls, *args, **kwargs):
+#         return 'f'
+#
+#
+# class Person(metaclass=MyType):
+#     pass
+#
+# p = Person
+# print(p)
+#
+# class My:
+#     def __new__(cls, *args, **kwargs):
+#         return 'f'
+#
+#
+# class Person2(My):
+#     pass
+#
+# p2 = Person2()
+# print(p2)
+#
+# def savings(cls):
+#     cls.account_type = 'savings'
+#     return cls
+#
+#
+# def checking(cls):
+#     cls.account_type = 'checking'
+#
+#
+# class Account:
+#     pass
+#
+#
+# @savings
+# class Bank1Savings(Account):
+#     pass
+#
+#
+# @savings
+# class Bank2Savings(Account):
+#     pass
+#
+#
+# @checking
+# class Bank1checking(Account):
+#     pass
+#
+#
+# @checking
+# class Bank2checking(Account):
+#     pass
+
+# if isinstance(['3'], (int, list)):
+#     print('haha')
+
+# class My:
+#     pass
+#
+# print(type(vars(My)))
+# print(vars(My))
+#
+#
+# from collections import OrderedDict
+#
+#
+# class MyMeta(type):
+#     @classmethod
+#     def __prepare__(metacls, name, bases):
+#         d = OrderedDict()
+#         d['f'] = 'dff'
+#         return d
+#
+#
+# class MyClass(metaclass=MyMeta):
+#     pass
+
+# print(vars(MyClass))
+# p = MyClass()
+#
+# print(p.__dict__)
+
+# class MyMeta(type):
+#     def __setattr__(self, key, value):
+#         print('setting class attribute...')
+#         super().__setattr__(key, value)
+#
+#
+# class Person(metaclass=MyMeta):
+#     def __setattr__(self, key, value):
+#         print('setting instance attribute...')
+#         super().__setattr__(key, value)
+#
+# Person.test_1 = 'test'
+#
+# p = Person()
+# p.test_2 = 'test_2'
+# print(Person.__dict__)
+# print(p.__dict__)
+# print(p.test_1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
