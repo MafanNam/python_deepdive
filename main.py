@@ -3,7 +3,6 @@
 # print(list(enumerate(a)))
 import math
 
-
 # class Rectangle:
 #     def __init__(self, width, height):
 #         self.__width = width
@@ -1024,7 +1023,6 @@ import math
 # print(t1.tz, t2.tz)
 
 
-
 # class Timer:
 #     tz = timezone.utc
 #
@@ -1326,14 +1324,129 @@ from time import sleep
 # print(p.__dict__)
 # print(p.test_1)
 
+#
+# def sort_by_length(arr):
+#     ls = []
+#     while arr:
+#         ls.append(arr.pop(arr.index(min(arr, key=len))))
+#     return ls
+#
+# app = ["Telescopes", "Glasses", "Eyes", "Monocles"]
+# print(sort_by_length(app))
+
+
+# def square_sum(numbers):
+#     return sum((n**2 for n in numbers))
+#
+# print(square_sum([1, 2]))
+
+# from string import ascii_letters
+# print(ascii_letters)
+# asic = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+# d = dict(zip(asic, range(1, len(asic))))
+# def alphabet_position(text):
+#     res = []
+#     for i in text:
+#         res.append(d.get(i.upper(), None))
+#     return res
+#
+# print(alphabet_position("The sunset sets at twelve o' clock."))
+#
+#
+# print(ord('t') - 96)
+# print(ord('a') - 96)
+#
+#
+# def alphabet_position(text):
+#     return ' '.join(str(ord(i) - 96) for i in text.lower() if i.isalpha())
+#
+# print(alphabet_position("The sunset sets at twelve o' clock."))
+
+
+# def increment_string(strng):
+#     rev = strng[::-1]
+#     num = ''
+#
+#     for i in rev:
+#         if i.isdigit():
+#             num += i
+#         else:
+#             break
+#     if num:
+#         rev = rev[len(num):]
+#         # print(rev)
+#         temp = ''
+#         for i in num[::-1]:
+#             if i == '0':
+#                 temp += i
+#             else:
+#                 break
+#         if int(temp) == 0:
+#             print(temp)
+#             num = temp[::-1][:-1] + '1'
+#             print(num)
+#         else:
+#             num = temp + str(int(num[::-1]) + 1)
+#     else:
+#         # print(rev)
+#         num = '1'
+#     temp = rev[::-1]
+#     # print(temp)
+#
+#     return temp + num
+#
+# import string
+#
+#
+# def increment_string(strng):
+#     alfa_part = []
+#     num_part = []
+#     full_nam = []
+#     if len(strng) == 0:
+#         return '1'
+#     if strng.isalpha():
+#         return strng + '1'
+#     else:
+#         for item in strng:
+#             if item in string.ascii_letters:
+#                 alfa_part.append(item)
+#             else:
+#                 num_part.append(item)
+#         full_nam.extend(str(int(''.join(num_part)) + 1))
+#         while len(num_part) != len(full_nam):
+#             full_nam.insert(0, '0')
+#         return ''.join(alfa_part + full_nam)
+#
+#
+#
+# print(increment_string('foo'))
+# print(increment_string('foobar001'))
+# print(increment_string('foobar23'))
+# print(increment_string('foobar99'))
+# print(increment_string('fo99obar99'))
+# print(increment_string('foobar00'))
+# print(increment_string(''))
 
 
 
 
+def sort_array(source_array):
+    temp = []
+    for i in range(len(source_array)):
+        if source_array[i] % 2 == 1:
+            temp.append(source_array[i])
+    temp.sort()
+    for i in range(len(source_array)):
+        if source_array[i] % 2 == 1:
+            source_array[i] = temp.pop(0)
+    return source_array
+
+print(False and False)
 
 
-
-
+print(sort_array([7, 1]))
+print(sort_array([5, 8, 6, 3, 4]))
+print(sort_array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
 
 
 
