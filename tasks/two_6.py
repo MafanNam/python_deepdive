@@ -10,7 +10,10 @@ def find_max_path(matrix):
     ind = [[0] * cols for _ in range(rows)]
     path = [[""] * cols for _ in range(rows)]
 
+    # print(ind)
+
     ind[0][0] = matrix[rows - 1][0]
+    # print(ind)
     path[0][0] = f"{rows - 1},0"
     for i in range(1, rows):
         ind[i][0] = ind[i - 1][0] + matrix[rows - 1 - i][0]
@@ -45,7 +48,9 @@ for row in matrix:
     print()
 
 max_path_sum, max_path = find_max_path(matrix)
-
+# print(max_path_sum)
+# print(max_path)
+print('\n' + '-'*40)
 print('\nMarked Matrix:')
 
 marked_matrix = [[str(matrix[i][j])
