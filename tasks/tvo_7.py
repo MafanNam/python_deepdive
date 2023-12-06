@@ -6,13 +6,20 @@ import numpy as np
 import random
 import math
 
-M = int(input("Enter the number of experiments(M) : "))
-N = int(input("Enter the number of alternatives in each experiment(N) : "))
+# M = int(input("Enter the number of experiments(M) : "))
+# N = int(input("Enter the number of alternatives in each experiment(N) : "))
 
-min_val = int(input("Random Mim: "))
-max_val = int(input("Random Max: "))
+M = 1000
+N = 100
+
+# min_val = int(input("Random Mim: "))
+# max_val = int(input("Random Max: "))
+
+min_val = 1
+max_val = 2000
 
 delta_input = int(input("Start delta: "))
+# delta_input = 0
 
 experiments, results = [[random.randint(min_val, max_val) for _ in range(N)] for _ in range(M)], []
 
