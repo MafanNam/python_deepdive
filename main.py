@@ -1430,23 +1430,75 @@ from time import sleep
 
 
 
-def sort_array(source_array):
-    temp = []
-    for i in range(len(source_array)):
-        if source_array[i] % 2 == 1:
-            temp.append(source_array[i])
-    temp.sort()
-    for i in range(len(source_array)):
-        if source_array[i] % 2 == 1:
-            source_array[i] = temp.pop(0)
-    return source_array
+# def sort_array(source_array):
+#     temp = []
+#     for i in range(len(source_array)):
+#         if source_array[i] % 2 == 1:
+#             temp.append(source_array[i])
+#     temp.sort()
+#     for i in range(len(source_array)):
+#         if source_array[i] % 2 == 1:
+#             source_array[i] = temp.pop(0)
+#     return source_array
+#
+# print(False and False)
+#
+#
+# print(sort_array([7, 1]))
+# print(sort_array([5, 8, 6, 3, 4]))
+# print(sort_array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
 
-print(False and False)
+# import matplotlib.pyplot as plt
+#
+# # Значення x
+# x_values = [-2.000, -1.750, -1.500, -1.250, -1.000, -0.750, -0.500, -0.250, 0.000,
+#             0.250, 0.500, 0.750, 1.000, 1.250, 1.500, 1.750, 2.000]
+#
+# # Значення series(x) та y(x)
+# series_values = [-0.123810, -0.146418, -0.116378, -0.065208, -0.008333, 0.128418,
+#                  0.291667, 0.593750, 1.000000, 1.593750, 2.458333, 3.690918,
+#                  5.425000, 7.844135, 11.197238, 15.800296, 22.149206]
+# y_values = [-0.135335, -0.130330, -0.111565, -0.071626, 0.000000, 0.118092,
+#             0.303265, 0.584101, 1.000000, 1.605032, 2.473082, 3.704750,
+#             5.436564, 7.853272, 11.204223, 15.825157, 22.167168]
+#
+# # Побудова графіку
+# plt.figure(figsize=(16, 14))
+# plt.plot(x_values, series_values, marker='o', label='series(x)')
+# plt.plot(x_values, y_values, marker='x', label='y(x)')
+# plt.xlabel('x')
+# plt.ylabel('Value')
+# plt.title('Comparison between series(x) and y(x)')
+# plt.legend()
+# plt.grid(True)
+# plt.show()
 
 
-print(sort_array([7, 1]))
-print(sort_array([5, 8, 6, 3, 4]))
-print(sort_array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
+import matplotlib.pyplot as plt
+
+# Значення x
+x_values = [-2.000, -1.750, -1.500, -1.250, -1.000, -0.750, -0.500, -0.250, 0.000,
+            0.250, 0.500, 0.750, 1.000, 1.250, 1.500, 1.750, 2.000]
+
+# Значення series(x) та y(x)
+series_values = [-0.180952, -0.066632, -0.200000, -0.102295, 0.041667, 0.062500,
+                 0.375000, 0.500000, 1.000000, 1.500000, 2.375000, 3.625000,
+                 5.375000, 7.807048, 11.059375, 15.720510, 22.092063]
+y_values = [-0.135335, -0.130330, -0.111565, -0.071626, 0.000000, 0.118092,
+            0.303265, 0.584101, 1.000000, 1.605032, 2.473082, 3.704750,
+            5.436564, 7.853272, 11.204223, 15.825157, 22.167168]
+
+# Побудова графіку
+plt.figure(figsize=(8, 6))
+plt.plot(x_values, series_values, marker='o', label='series(x)')
+plt.plot(x_values, y_values, marker='x', label='y(x)')
+plt.xlabel('x')
+plt.ylabel('Value')
+plt.title('Comparison between series(x) and y(x)')
+plt.legend()
+plt.grid(True)
+plt.show()
+
 
 
 
