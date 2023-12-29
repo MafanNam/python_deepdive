@@ -1474,11 +1474,11 @@ from time import sleep
 # plt.show()
 
 
-import matplotlib.pyplot as plt
-
-# Значення x
-x_values = [-2.000, -1.750, -1.500, -1.250, -1.000, -0.750, -0.500, -0.250, 0.000,
-            0.250, 0.500, 0.750, 1.000, 1.250, 1.500, 1.750, 2.000]
+# import matplotlib.pyplot as plt
+#
+# # Значення x
+# x_values = [-2.000, -1.750, -1.500, -1.250, -1.000, -0.750, -0.500, -0.250, 0.000,
+#             0.250, 0.500, 0.750, 1.000, 1.250, 1.500, 1.750, 2.000]
 
 # Значення series(x) та y(x)
 # series_values = [-0.180952, -0.066632, -0.200000, -0.102295, 0.041667, 0.062500,
@@ -1499,12 +1499,17 @@ x_values = [-2.000, -1.750, -1.500, -1.250, -1.000, -0.750, -0.500, -0.250, 0.00
 # plt.grid(True)
 # plt.show()
 
-a = tuple([3, 4, 3])
+# a = tuple([3, 4, 3])
+#
+# print(a)
 
-print(a)
 
-
-
+# def chromosome_check(chromosome):
+#     return f"Congratulations! You\'re going to have a {'son' if 'Y' in chromosome else 'daughter'}."
+#
+#
+# print(chromosome_check('XX'))
+# print(chromosome_check('XY'))
 
 
 
