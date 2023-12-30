@@ -1513,3 +1513,13 @@ from time import sleep
 
 
 
+# def replace_exclamation(st: str):
+#     for i in 'aeiouAEIOU':
+#         if i in st:
+#             st = st.replace(i, '!')
+#     return st
+#
+#
+#
+#
+# print(replace_exclamation('ABCDE'))
