@@ -1073,6 +1073,7 @@ import math
 
 from time import sleep
 
+
 # t1 = Timer()
 # t1.start()
 # sleep(2)
@@ -1428,8 +1429,6 @@ from time import sleep
 # print(increment_string(''))
 
 
-
-
 # def sort_array(source_array):
 #     temp = []
 #     for i in range(len(source_array)):
@@ -1512,7 +1511,6 @@ from time import sleep
 # print(chromosome_check('XY'))
 
 
-
 # def replace_exclamation(st: str):
 #     for i in 'aeiouAEIOU':
 #         if i in st:
@@ -1523,3 +1521,28 @@ from time import sleep
 #
 #
 # print(replace_exclamation('ABCDE'))
+
+
+# def check_for_factor(base, factor):
+#     return not bool(base % factor)
+#
+#
+# print(check_for_factor(10, 2))
+
+# def hex_to_dec(s: str):
+#     return int(s, 16)
+#
+#
+# print(hex_to_dec('1'))
+# print(hex_to_dec('a'))
+
+# def century(year):
+#     return (year - 1) // 100 + 1
+#
+#
+# print(century(1705))  # 18
+# print(century(1900))
+# print(century(1601))
+# print(century(2000))
+# print(century(356))  # 4
+# print(century(89))  # 1
