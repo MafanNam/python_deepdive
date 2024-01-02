@@ -1546,3 +1546,19 @@ from time import sleep
 # print(century(2000))
 # print(century(356))  # 4
 # print(century(89))  # 1
+#
+# def findContentChildren(g: list, s: list) -> int:
+#     t = 0
+#     for j in range(len(s)):
+#         for i in range(len(g)):
+#             if s[j] >= g[i]:
+#                 g[i] = 0
+#                 s[i] = 0
+#                 t += 1
+#                 break
+#     return t
+
+
+# print(findContentChildren([1, 2, 3], [1, 1]))  # 1
+# print(findContentChildren([1, 2, 3], []))  # 0
+# print(findContentChildren([1, 2], [1, 2, 3]))  # 1
