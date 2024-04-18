@@ -58,7 +58,7 @@ root.title("Прогноз за знаком зодіаку")
 
 
 # Завантаження фонового зображення
-background_image = PhotoImage(file="hoodie-cute-anime-girl-09.jpg")
+# background_image = PhotoImage(file="hoodie-cute-anime-girl-09.jpg")
 # background_label = tk.Label(root, image=background_image)
 # background_label.place(x=0, y=0, relwidth=1, relheight=1)
 

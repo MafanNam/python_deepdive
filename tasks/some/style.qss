@@ -1,14 +1,14 @@
 QWidget{
-background: #CBE6C7;
+    background: #000000; /* Колір фону чорний */
 }
 
 QPushButton {
     font-family:"Times";
-    font-color: '#1B3617';
+    color: #ffffff; /* Колір тексту білий */
     font-size: 17px;
-    border: 2px solid #8f8f91;
+    border: 2px solid #ffffff; /* Колір обрамлення білий */
     border-radius: 6px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #B0E0A9, stop: 1 #dadbde);
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #000000, stop: 1 #000000);
 }
 
 QPushButton:pressed {

@@ -17,6 +17,14 @@ def chat():
     }
     count_conversations = 0
     conversation_history = []
+    name = ''
+    date_birth = ''
+    response = f"{assistant_name}: Привіт! як вас звати?"
+    print(response)
+    user_input = input("Ви: ").lower()
+    name = user_input
+    response = f"{assistant_name}: Добрий день {name.title()}"
+    print(response)
 
     while True:
         user_input = input("Ви: ").lower()
