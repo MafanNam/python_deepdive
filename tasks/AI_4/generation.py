@@ -97,5 +97,5 @@ class GenerationGUI(QtWidgets.QMainWindow):
 
         y = [self.ekg_simulator.get_alternation(t) for t in x_fake]
 
-        self.graphWidget.setBackground('#fac0fa')
-        self.graphWidget.plot(x, y, clear=True, pen=pg.mkPen(color=('#99439a'), width=1.5))
+        self.graphWidget.setBackground('#21071e')
+        self.graphWidget.plot(x, y, clear=True, pen=pg.mkPen(color=('#fad0f2'), width=1.5))
