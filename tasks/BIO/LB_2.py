@@ -18,4 +18,5 @@ def get_contig_length(file_name: str) -> None:
 
 file_name = "contigs.fasta"
 
+print(f"File name: {file_name}")
 get_contig_length(file_name)

@@ -10,6 +10,7 @@
 #
 # merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
 # merge([-1,0,0,3,3,3,0,0,0], 6, [1, 2, 3], 3)
+from functools import reduce
 
 
 # def removeElement(nums: list, val: int) -> int:
@@ -171,13 +172,128 @@
 #
 # print(romanToInt("III"))
 # print(romanToInt("MCMXCIV"))
+#
+# A0 = dict(zip(('a', 'b', 'c', 'd', 'e'), (1, 2, 3, 4, 5)))
+# A1 = range(10)
+# A2 = sorted([i for i in A1 if i in A0])
+# A3 = sorted([A0[s] for s in A0])
+# A4 = [i for i in A1 if i in A3]
+# A7 = [i % 2 and i for i in A1 if 2 < i < 8]
+# print(A7)
+#
+# print(','.join(str(j**2) for j in range(10)))
 
-A0 = dict(zip(('a', 'b', 'c', 'd', 'e'), (1, 2, 3, 4, 5)))
-A1 = range(10)
-A2 = sorted([i for i in A1 if i in A0])
-A3 = sorted([A0[s] for s in A0])
-A4 = [i for i in A1 if i in A3]
-A7 = [i % 2 and i for i in A1 if 2 < i < 8]
-print(A7)
+# def hIndex(citations: list) -> int:
+#     citations.sort(reverse=True)
+#     count = 0
+#     for i in range(len(citations)):
+#         if citations[i] > count:
+#             count += 1
+#         else:
+#             break
+#     return count
+#
+#
+# print(hIndex([3, 0, 6, 1, 5]))
 
-print(','.join(str(j**2) for j in range(10)))
+# import random
+#
+#
+# class RandomizedSet:
+#
+#     def __init__(self, nums: list):
+#         self.nums = nums
+#
+#     def insert(self, val: int) -> bool:
+#         if val in self.nums:
+#             return False
+#         self.nums.append(val)
+#         return True
+#
+#     def remove(self, val: int) -> bool:
+#         if val in self.nums:
+#             self.nums.remove(val)
+#             return True
+#         return False
+#
+#     def getRandom(self) -> int:
+#         return random.choice(self.nums)
+#
+#
+# obj = RandomizedSet([[], [1], [2], [2], [], [1], [2], []])
+# param_1 = obj.insert()
+# param_2 = obj.remove(val)
+# param_3 = obj.getRandom()
+
+
+# def productExceptSelf(nums: list) -> list:
+#     res = []
+#     temp = nums.copy()
+#     for i in range(len(nums)):
+#         temp.pop(i)
+#         mul = 1
+#         for tem in temp:
+#             mul *= tem
+#         res.append(mul)
+#         temp = nums.copy()
+#     return res
+
+
+# print(productExceptSelf([1, 2, 3, 4]))
+
+# def lengthOfLastWord(s: str) -> int:
+#     return len(s.strip().split(' ')[-1])
+
+
+# def longestCommonPrefix(strs: list) -> str:
+#     pre = strs[0][1]
+#     for el in strs:
+#         if el.startswith(el[:len(pre)-1]):
+#             pre = el[:len(pre)]
+#         elif not el.startswith(pre):
+#             pre = ''
+#
+#     return pre
+
+
+# def twoSum(nums: list, target: int) -> list:
+#     for i in range(len(nums)):
+#         for j in range(i + 1, len(nums)):
+#             if nums[i] + nums[j] == target:
+#                 return [i, j]
+
+
+# def strStr(haystack: str, needle: str) -> int:
+#     return haystack.find(needle)
+#
+# print(strStr("hello", "gg"))
+
+
+# def reverseWords(s: str) -> str:
+#     return ' '.join(s.strip().split()[::-1])
+#
+#
+# print(reverseWords("Let's take LeetCode contest"))
+# print(reverseWords("a good   example"))
+
+# def isPalindrome(s: str) -> bool:
+#     all_alpha = ''.join([i for i in s.lower() if i.isalnum()])
+#     print(all_alpha)
+#     return all_alpha == all_alpha[::-1]
+#
+#
+# print(isPalindrome("A man, a plan, a canal: Panama"))
+# print(isPalindrome("0P"))
+
+def isSubsequence(s: str, t: str) -> bool:
+    for i in range(len(s)):
+        if s[i] in t:
+            t = t[t.index(s[i]) + 1:]
+        else:
+            return False
+    return True
+
+
+
+print(isSubsequence("abc", "ahbgdc"))
+print(isSubsequence("aaaaaa", "bbaaaa"))
