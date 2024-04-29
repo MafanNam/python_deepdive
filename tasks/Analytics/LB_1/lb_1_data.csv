@@ -1,0 +1,11 @@
+,age,presence_of_children,sex,current_smoker,heart_rate,blood_pressure,cigs_per_day,chol
+0,54,yes,male,yes,95,110/72,,219.0
+1,45,yes,male,yes,64,121/72,,248.0
+2,58,no,male,yes,81,127.5/76,,235.0
+3,42,no,male,yes,90,122.5/80,,225.0
+4,42,yes,male,yes,62,119/80,,226.0
+5,57,yes,male,yes,62,107.5/72.5,,223.0
+6,43,yes,male,yes,75,109.5/69,,222.0
+7,42,no,male,yes,66,123/73,,196.0
+8,37,yes,male,yes,65,123.5/77,,188.0
+9,49,no,male,yes,93,127.5/81.5,,256.0

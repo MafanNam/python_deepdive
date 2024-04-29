@@ -294,6 +294,5 @@ def isSubsequence(s: str, t: str) -> bool:
     return True
 
 
-
 print(isSubsequence("abc", "ahbgdc"))
 print(isSubsequence("aaaaaa", "bbaaaa"))
