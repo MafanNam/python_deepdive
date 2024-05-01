@@ -1571,3 +1571,55 @@
 # print(findContentChildren([1, 2], [1, 2, 3]))  # 1
 
 # print(type(object))
+
+
+# dict1 = {'one': 1, 'two': 2, 'three': 3}
+# dict2 = {'one': 1, 'two': 5, 'four': 8}
+# dict3 = dict(dict1)
+# dict4 = dict(dict2)
+# dict3.update(dict2)
+# dict4.update(dict1)
+# print(dict3 == dict4)
+
+
+# def boo(x):
+#     if x == 1:
+#         return x
+#     return x * boo(x - 1)
+#
+#
+# print(boo(3))
+
+# list1 = [1, 2, 3]
+# list2 = list1[-3:-1]
+#
+# print(list2)
+
+# def phone_valid(number: str) -> bool:
+#     list_numb = number.split('-')
+#
+#     for numb in list_numb:
+#         if not numb.isdigit():
+#             return False
+#
+#     if len(list_numb) == 4:
+#         return (
+#                 list_numb[0] == '7' and
+#                 len(list_numb[1]) == 3 and
+#                 len(list_numb[2]) == 3 and
+#                 len(list_numb[3]) == 4
+#         )
+#     elif len(list_numb) == 3:
+#         return (
+#                 len(list_numb[0]) == 3 and
+#                 len(list_numb[1]) == 3 and
+#                 len(list_numb[2]) == 4
+#         )
+#     return False
+#
+#
+# print(phone_valid('7-301-447-5820'))
+# print(phone_valid('301-447-5820'))
+# print(phone_valid('301-4477-5820'))
+# print(phone_valid('3X1-447-5820'))
+# print(phone_valid('3014475820'))

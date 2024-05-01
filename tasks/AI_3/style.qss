@@ -1,0 +1,59 @@
+QWidget {
+    background: #2E2E2E; /* Темний фон */
+}
+
+QPushButton {
+    font-family: "Times";
+    color: #FFFFFF; /* Білий текст */
+    border: 2px solid #6C6C6C; /* Сіра рамка */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4D4D4D, stop: 1 #333333); /* Темний фон кнопки */
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #333333, stop: 1 #666666); /* Темний фон кнопки при натисканні */
+}
+
+QPushButton:default {
+    border-color: #000080; /* Підкреслення замовчувань для відображення промінентності */
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #555555; /* Сіра рамка */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4D4D4D, stop: 1 #333333); /* Темний фон слайдера */
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 #666666, stop: 1 #333333); /* Темний колір кнопки */
+    border: 1px solid #000000; /* Чорна рамка */
+    width: 18px;
+}
+
+QFrame, QLabel, QToolTip, QLineEdit {
+    font-family: "Times";
+    font-size: 14px;
+    color: #FFFFFF; /* Білий текст */
+}
+
+QCheckBox {
+    spacing: 5px;
+    font-family: "Times";
+    font-size: 14px;
+}
+
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #666666, stop: 1 #333333); /* Темний фон */
+}
+
+QCheckBox::indicator:unchecked {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #666666, stop: 1 #333333); /* Темний фон */
+}
+
+QCheckBox::indicator:checked {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #17600B, stop: 1 #333333); /* Темний фон вибраних пунктів */
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #17600B, stop: 1 #333333); /* Темний фон */
+}
