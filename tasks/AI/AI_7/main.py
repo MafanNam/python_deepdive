@@ -43,7 +43,7 @@ def get_derivative(data):
     derivative = np.zeros_like(data)
     for k in range(3, len(data) - 3):
         derivative[k] = (1 / 60) * (
-                    data[k + 3] - 9 * data[k + 2] + 45 * data[k + 1] - 45 * data[k - 1] + 9 * data[k - 2] - data[k - 3])
+                data[k + 3] - 9 * data[k + 2] + 45 * data[k + 1] - 45 * data[k - 1] + 9 * data[k - 2] - data[k - 3])
     return derivative
 
 
@@ -81,6 +81,7 @@ def get_phase_plot():
     ax.tick_params(axis='x', colors='gray')
     ax.tick_params(axis='y', colors='gray')
     fig.tight_layout()
+
 
 init_data()
 normalize_data()

@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from scipy import signal
 import numpy as np
 
 
@@ -7,7 +6,6 @@ def show_graphics(ecg1, t1, TAU):
     new_ecg1 = ecg1[0:len(ecg1) - TAU]
     new_ecg2 = ecg1[TAU:len(ecg1)]
     new_ecg5 = np.gradient(ecg1, t1)
-
 
     plt.figure(1, figsize=(16, 2))
     plt.plot(t1, ecg1, 'r'), plt.grid
@@ -25,7 +23,6 @@ def show_graphics(ecg1, t1, TAU):
     plt.plot(new_ecg5, ecg1, 'r'), plt.grid
     plt.title('FP №2')
 
-
     plt.show()
 
 
@@ -35,9 +32,8 @@ with open('ECG.txt') as f:
         inner_list = [elt.strip() for elt in line.split(' ')]
 
         for a in inner_list:
-            if a!='':
+            if a != '':
                 ecg1.append(float(a))
-
 
 ecg2 = []
 with open('ECG.txt') as f:
@@ -74,4 +70,3 @@ while (TAU < 1):
     TAU = int(input('should be greater than 1: '))
 
 show_graphics(ecg1, t1, TAU)
-
