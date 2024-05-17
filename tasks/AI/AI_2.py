@@ -63,7 +63,7 @@ root.title("Прогноз за знаком зодіаку")
 # background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 root.geometry("500x500")
-bg = PhotoImage(file="bd_horoscope.png")
+bg = PhotoImage(file="../bd_horoscope.png")
 
 canvas1 = tk.Canvas(root, width=500, height=500)
 canvas1.pack(fill="both", expand=True)
